@@ -1,0 +1,57 @@
+.about-advantage-contain{
+  padding: 30px;
+  .title{
+    margin: 20px 0;
+    border-bottom: 2px solid #e2e2e2;
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid #ea5504;
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      padding: 10px 0;
+      margin-bottom: -2px;
+    }
+  }
+  .text-contain{
+      padding-left: 24px;
+      .vice-title{
+        color: #ff5a00;
+        font-size: 18px;
+      }
+      p{margin: 5px 0;}
+  }
+  .service-pic{
+    margin-top: 10px;
+    margin-bottom: 80px;
+    line-height: 0;
+    img{
+      width: 90%;
+      text-align: center;
+    }
+  }
+  .trade-flow-conatin{
+    text-align: center;
+    margin-top: 40px;
+    padding: 52px 125px;
+    background: #fff6f2;
+    .flow-list{
+      display: inline-block;
+      text-align: center;
+      width: 24%;
+      .icon-contain{
+        .icon{
+          width: 83px;
+          height: 70px;
+        }
+        .arrow{float:right;}
+      }
+    }
+  }
+  .account-pic{
+    margin-top: 20px;
+    text-align: center;
+    p{font-weight: bold;}
+  }
+}

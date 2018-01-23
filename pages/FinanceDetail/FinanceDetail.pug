@@ -1,0 +1,294 @@
+extends ../../common/pages/layout.pug
+include ./instruction.pug
+block head
+  META(HTTP-EQUIV="Pragma" CONTENT="no-cache")
+  META(HTTP-EQUIV="Cache-Control" CONTENT="no-cache")
+  META(HTTP-EQUIV="Expires" CONTENT="0")
+  title {{productDetail.productTag}}
+block body
+  .finance-detail-wrap
+    .top-crumb-wrap.clearfix
+      .bread-crumb-contain
+        a(href="/") 首页
+        a(href="{{productDetail.crumbUrl}}") 投资
+        span {{productDetail.productName}}
+      ul.broadcast-contain
+        | {% for message in messageList %}
+        li {{message}}
+        | {% endfor %}
+    .product-info-contain
+      .top-line(productId="{{productDetail.productId}}" productType="{{productDetail.productType}}").clearfix
+        input(type="hidden" id="refreshed" value="no") 
+        span.title {{productDetail.productName}}
+        | {% if(productDetail.productTag) %}
+        span.tag {{productDetail.productTag}}
+        | {% endif %}
+        | {% if(productDetail.useBirdCoinTag === 1) %}
+        img(src=require('./imgs/icon-coupon.png'))
+        span.lib-tag 可使用鸟币
+        | {% endif %}
+        | {% if(productDetail.type=='tyb') %}
+        img(src=require('./imgs/icon-raise.png'))
+        span.lib-tag 仅限使用体验金
+        | {% elif(productDetail.useCouponTag === 1) %}
+        img(src=require('./imgs/icon-raise.png'))
+        span.lib-tag 可使用加息券
+        img(src=require('./imgs/icon-return.png'))
+        span.lib-tag 可使用返现券
+        | {% endif %}
+        | {% if(productDetail.isAssignment === 1) %}
+        img(src=require('./imgs/icon-coupon.png'))
+        span.lib-tag 可转让
+        | {% endif %}
+        span.right
+          | 查看
+          a(href="{{productDetail.protocolUrl}}" target="_blank") 《{{productDetail.protocolName}}》
+          | 范本
+      .bottom-line
+        .left-contain
+          .top-message-wrap
+            .rate
+              p 历史年化收益
+              p.spe-color
+                | {{productDetail.firstAnnualIncome}}
+                | {% if(productDetail.secondAnnualIncome) %}
+                span +{{productDetail.secondAnnualIncome}}
+                | {% endif %}
+            .date
+              p 投资期限(天)
+              p.spe-down {{productDetail.convertDay}}
+            .finance-num
+              p 起投金额(元)
+              p.spe-down.remain-money {{productDetail.staInvestAmount}}
+            | {% if(productDetail.type!=='tyb') %}
+            .process-line
+              p.text 项目进度
+              p.num {{productDetail.progress}}%
+              .line-bottom
+                p.line(style='width:{{productDetail.progress}}%')
+            | {% endif %}
+          .bottom-mes-wrap
+            .total-money-cont
+              p.total-money {{productDetail.productTotalAmount}}
+              p 项目总额(元)
+            .text-cont
+              | {% if(productDetail.type=='tyb') %}
+              p
+                span 投资方式：
+                span.sec 体验金投资
+                span.cest 计息方式：
+                span.sec T+0
+              p
+                span 收益方式：
+                span.sec 以鸟币返还
+                span.cest 还款方式：
+                span.sec 本金收回，收益归您
+              | {% else %}
+              p
+                span 起息时间：
+                span.sec {{productDetail.staRateDate}}
+                span.cest 还款方式：
+                span.sec {{productDetail.repaymentType}}
+              p
+                span 结息日期：
+                span.sec {{productDetail.endDate}}
+                span.cest 还款时间：
+                span.sec 1～2个工作日
+              | {% endif %}
+        .right-contain-wrap
+          .right-contain.no-login
+            p.invest-title
+              | 投资金额
+              | {% if(productDetail.type=='tyb') %}
+              span.vice-title 我出本金，你赚收益
+              | {% endif %}
+            p.rest
+              | {% if(productDetail.type=='tyb') %}可体验金额：{% else %}剩余可投金额：{% endif %}
+              span.can-invest {{productDetail.productRemainAmount}}
+            p.note
+              | {% if(productDetail.type=='tyb') %}体验金及投资记录{% else %}账户余额及投资记录{% endif %}
+              a.go_login 登录
+              | 后可查看
+            button.instantly-submit.go_login 立即登录
+            p.remind 领投鸟提醒您：理财非存款，投资须谨慎
+          .right-contain.is-login
+            p.invest-title 投资金额
+            | {% if(productDetail.type=='tyb') %}
+            p.total-limit-amount.clearfix
+              | 可体验金额：
+              span 60,000元
+            p.account-remain-money.clearfix
+              | 体验金余额：
+              span 60,000元
+            .input-contain
+              input(rateData="{{productDetail.annualIncome}}" convertDay="{{productDetail.convertDay}}" type='text' value="60000" remainAmount="{{productDetail.productRemainAmount}}" disabled="disabled" startInvest="{{productDetail.staInvestAmount}}" singleLimitAmount="{{productDetail.singleLimitAmount}}" min='60000')
+              span 元
+            p.add-up-income
+              | 预计收益
+              span(id="pre-income") 13.18元
+            .bottom-contain-absolute
+              button.instantly-submit 立即投资
+            | {% else %}
+            p.total-limit-amount.clearfix
+              | 剩余可投：
+              span.login-can-invest {{productDetail.productRemainAmount}}
+            p.account-remain-money.clearfix
+              | 账户余额：
+              span(id="account-money") 0.00元
+            | {% if(productDetail.productStatus !== '1') %}
+            p.not-buy-text
+              | 此产品当前不可投资，请到
+              a(href='/finance/list/0/1/0/0') 投资频道
+              | 选择更多投资产品。
+            | {% else %}
+            .input-contain
+              input(id='input-money' rateData="{{productDetail.annualIncome}}" convertDay="{{productDetail.convertDay}}" type='tel' placeholder='输入投资金额，{{productDetail.staInvestAmount}}元起投' remainAmount="{{productDetail.productRemainAmount}}" startInvest="{{productDetail.staInvestAmount}}" singleLimitAmount="{{productDetail.singleLimitAmount}}" min='1')
+              span 元
+            p.add-up-income
+              | 预计收益
+              span(id="pre-income") 0.00元
+            p.toast-info 最低{{productDetail.staInvestAmount}}元起投
+            | {% endif %}
+            .bottom-contain-absolute
+              p.go-recharge
+                | 账户余额不足！请去
+                a(href="/account/#/account/trade/recharge") 充值
+              | {% if(productDetail.productStatus === '1') %}
+              button.instantly-submit.disabled 立即投资
+              | {% elif(productDetail.productStatus === '3') %}
+              button.can-not-submit.disabled 已还款
+              | {% elif(productDetail.productStatus === '2') %}
+              button.can-not-submit.disabled 募集结束
+              | {% else %}
+              button.can-not-submit.disabled 还款结束
+              | {% endif %}
+              p.remind 领投鸟提醒您：理财非存款，投资须谨慎
+            | {% endif %}
+          .right-contain.can-not-buy
+            p.invest-title 投资金额
+            | {% if(productDetail.type=='tyb') %}
+            p
+              | 可体验金额：
+              span 60,000元
+            p.not-buy-text
+              | 此产品为新手体验标，您已体验过或体验金已经过期。请到
+              a(href='/finance/list/0/1/0/0') 投资频道
+              | 选择更多投资产品。
+            | {% else %}
+            p
+              | 剩余可投金额：
+              span {{productDetail.productRemainAmount}}元
+            p.not-buy-text
+              | 此产品为新手标，您只能投资一次，请到
+              a(href='/finance/list/0/1/0/0') 投资频道
+              | 选择更多投资产品。
+            | {% endif %}
+            .bottom-contain-absolute
+              button.instantly-submit.disabled 立即投资
+    | {% if(productDetail.type=='finPlan') %}
+    .process-invest
+      img(src=require('./imgs/p.png'))
+    | {% endif %}
+    | {% if(productDetail.type=='act') %}
+    .process-invest
+      img(src=require('./imgs/p.png'))
+    | {% endif %}
+    | {% if(productDetail.type=='zt') %}
+    .process-invest
+      img(src=require('./imgs/p.png'))
+    | {% endif %}
+    .tab-page-wrap
+      .nav-title
+        span.active(for="contain-item1") 项目详情
+        span(for="contain-item2") 风控保障
+        span(for="contain-item3") 投资记录
+        span(for="contain-item4") 常见问题
+      .page-content
+        .contain-item1(name="item")
+          | {% if(productDetail.type == 'new') %}
+          +new
+          | {% elif(productDetail.type == 'tyb') %}
+          +tyb
+          | {% elif(productDetail.type == 'finPlan') %}
+          +finPlan
+          | {% elif(productDetail.type == 'act') %}
+          +finPlan
+          | {% elif(productDetail.type == 'GZG') %}
+          +gzg
+          | {% elif(productDetail.type == 'XFFQ') %}
+          +xffq
+          | {% elif(productDetail.type == 'XYB') %}
+          +xyb
+          | {% elif(productDetail.type == 'zt') %}
+          +finPlan
+          | {% else %}
+          +lct
+          | {% endif %}
+        .contain-item2(name="item")
+          | {% if(productDetail.type == 'GZG') %}
+          +fb_gzg
+          | {% elif(productDetail.type == 'other') %}
+          +fb_lct
+          | {% elif(productDetail.type == 'XFFQ') %}
+          +fb_xffq
+          | {% elif(productDetail.type == 'XYB') %}
+          +fb_xyb
+          | {% else %}
+          +fb_fin
+          | {% endif %}
+        .contain-item3(name="item")
+          .history-list-nl
+            img(src=require('./imgs/wushuju.png'))
+            p
+              | 暂无记录，
+              a(href='') 登录
+              | 后可见
+          .history-list-no-data
+            img(src=require('./imgs/wushuju.png'))
+            p 暂时还没有哦～_～
+          ul.history-list-il
+            p.line-first
+              span 序列号
+              span 成交时间
+              span 投资人
+              span 投资金额
+            .list-content
+          .page-navigation
+        .contain-item4(name="item")
+          | {% if(productDetail.type == 'new') %}
+          +question_new
+          | {% elif(productDetail.type == 'tyb') %}
+          +question_tyb
+          | {% elif(productDetail.type == 'finPlan') %}
+          +question_fin
+          | {% elif(productDetail.type == 'act') %}
+          +question_fin
+          | {% elif(productDetail.type == 'GZG') %}
+          +question_gyl
+          | {% elif(productDetail.type == 'XFFQ') %}
+          +question_xffq
+          | {% elif(productDetail.type == 'XYB') %}
+          +question_xyb
+          | {% elif(productDetail.type == 'zt') %}
+          +question_fin
+          | {% else %}
+          +question_lct
+          | {% endif %}
+    .modal-shadow
+    .modal-contain-wrap
+      .modal-contain
+        img.close(src=require('./imgs/close.png'))
+        .logo-contain
+          img(src=require('./imgs/modal_logo.png') alt="logo")
+        p.line-contain 为积极响应国家政策
+        p.text 为保证您的资金安全，请尽快激活活着开通华瑞银行资金存管账户
+        p.btn 激活/开通银行存管
+  //- 侧边栏的悬浮按钮
+  .slidebar-wrap
+    .wrap
+      span.ltn-iconfont.icon-kefu
+      span.text 在线咨询
+    span.ltn-iconfont.icon-qcode
+      img(src=require('./imgs/code-weixin.png'))
+      i.text-shaoma 扫码关注
+    .ltn-iconfont.icon-top-arrow

@@ -1,0 +1,82 @@
+extends ../../common/pages/layout.pug
+block head
+  title {{productDetail.productTag}}
+block body
+  .finance-confirm-wrap
+    .top-crumb-wrap.clearfix
+      .bread-crumb-contain
+        a(href="/") 首页
+        a(href="{{productDetail.crumbUrl}}") 投资
+        span {{productDetail.productName}}
+      ul.broadcast-contain
+        | {% for message in messageList %}
+        li {{message}}
+        | {% endfor %}
+    .confirm-contain-wrap
+      p.top-title(birdCoinTag="{{productDetail.useBirdCoinTag}}" couponTag="{{productDetail.useCouponTag}}" productId="{{productDetail.productId}}" investMoney="{{productDetail.investMoney}}")
+        span 支付确认
+      .content-contain-wrap.clearfix
+        .list-contain.clearfix
+          ul.list-left
+            li.clearfix
+              span 项目名称 
+              span {{productDetail.productName}}
+            li.clearfix
+              span 历史年化
+              span {{productDetail.annualIncomeText}}
+            li.clearfix
+              span 持有金额
+              span.invest-money {{productDetail.investMoney}}元
+            li.clearfix
+              span 投资时间 
+              span.invest-start-time {{productDetail.orderTime}}
+          ul.list-right
+            li.clearfix
+              span 计息方式
+              span 起息日计息
+            li.clearfix
+              span 回款方式
+              span {{productDetail.repaymentType}}
+            li.clearfix
+              span 预计收益
+              span.pre-income {{productDetail.preIncome}}
+            li.clearfix
+              span 到期时间
+              span {{productDetail.endDate}}
+        .ticket-display-contain
+          p.vice-title 使用理财金券&鸟币
+          p.vice-lit-describe 温馨提示：三种理财金券只能使用其一，并且只能使用1张！鸟币可跟以下任何理财金券叠加使用！
+          .ticket-content-wrap
+            .top-tt
+              span.active(for="fx-ticket") 返现券
+              span(for="jx-ticket") 加息券
+              span(for="exchange-ticket") 理财金券兑换
+            ul.ticket-list-contain
+              .fx-ticket(name="ticket-contain")
+              .jx-ticket(name="ticket-contain")
+              .exchange-ticket(name="ticket-contain")
+                .exchange-input-contain
+                  p.exchange-mes 请输入理财金券的兑换码：
+                  .exc-contain
+                    input(type="text" placeholder="请输入兑换码" maxlength="25")
+                    button 兑换并使用
+                  p.describe-text
+                    span.err-mes
+                .exc-ticket-result-contain(style="display:none")
+              .no-data
+                img(src=require('./imgs/wushuju.png'))
+                p 暂时还没有哦～_～
+        .bird-icon-check
+          input(type="checkbox" checked="checked")
+          span 使用鸟币抵扣
+        p.result-total
+          span.ticket
+          span.bird-coin
+          | 实际支付：
+          | {% if(productDetail.type=='tyb') %}
+          span.result-pay(style="display:none")
+          span 0元
+          | {% else %}
+          span.result-pay
+          | {% endif %}
+        button.btn-confirm-submit 确认支付

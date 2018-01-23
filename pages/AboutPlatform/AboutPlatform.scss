@@ -1,0 +1,51 @@
+// 帮助中心内容
+.about-mian-wrap{
+  .about-platform-content{
+    padding: 30px;
+    .banner{
+      width: 100%;
+    }
+    .title{
+      margin: 20px 0;
+      border-bottom: 2px solid #e2e2e2;
+      span{
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 2px solid #ea5504;
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: -2px;
+      }
+    }
+    .text{
+      p{
+        margin: 0;
+        line-height: 1.5em;
+      }
+      p.header{
+        margin-top: 10px;
+      }
+    }
+    .logo{
+      img{
+        float: left;
+        width: 280px;
+        margin-right: 10px;
+      }
+    }
+    .imglist{
+      p{
+        text-align: center;
+        img{
+          float: left;
+          width: 333px;
+          margin-left: 36px;
+          margin-top: 42px;
+          margin-bottom: 84px;
+        }
+      }
+    }
+  }
+}

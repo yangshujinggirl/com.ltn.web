@@ -1,0 +1,65 @@
+.about-mian-wrap{
+  width: 1190px;
+  margin: 0 auto;
+  border: 1px solid rgb(215, 215, 215);
+  margin-top: 40px;
+  background-color: #fff;
+  position: relative;
+  padding-left: 170px;
+  .left{
+    position: absolute;
+    left: 0;
+    border-right: 1px solid rgb(215, 215, 215);
+    background-color: rgb(252, 252, 252);
+    min-height: 100%;
+    li{
+      box-sizing:border-box;
+      padding-left: 30px;
+      width: 170px;
+      height: 40px;
+      line-height: 40px;
+      overflow:hidden;
+      text-overflow : ellipsis;
+      color: rgb(106, 106, 106);
+      font-size: 14px;
+      a{
+        color: rgb(106, 106, 106);
+      }
+    }
+    .title{
+      color: rgb(58, 58, 58);
+      font-weight: bold;
+      border-left: 2px solid red;
+      margin-left: 16px;
+      padding-left: 12px;
+      line-height: inherit;
+      height: inherit;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 154px;
+      margin-top: 20px;
+    }
+    .href{
+      border-top:1px solid rgb(252, 252, 252);;
+      border-bottom:1px solid rgb(252, 252, 252);
+    }
+    .href.selected{
+      border-top:1px solid rgb(215, 215, 215);
+      border-bottom:1px solid rgb(215, 215, 215);
+      background-color: #fff;
+      &:after{
+        content: ".";
+        position: absolute;
+        height: 38px;
+        width: 1px;
+        background-color: #fff;
+        right: -1px;
+        z-index: 222;
+        font-size: 0;
+      }
+    }
+  }
+  .content{
+    min-height: 560px;
+  }
+}

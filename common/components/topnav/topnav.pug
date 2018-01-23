@@ -1,0 +1,13 @@
+.top-nav-wrap
+  .top-nav-content
+    .left
+      a(href='/')
+        img(src=require('./imgs/logo.jpg')).logo-img
+        img(src=require('./imgs/logo.gif'))
+    .right
+      a.nav-item(href='/' class="{{TopNavFirstIsSelected}}") 首页
+      a.nav-item(href="/finance/list/0/1/0/0" class="{{TopNavInvestIsSelected}}") 投资
+      a.nav-item(href="http://bbs.lingtouniao.com" target='_blank') 社区
+      a.nav-item(href="/other/downloadapp" class="{{TopNavDownloadIsSelected}}") 下载APP
+      a.nav-item(href="/other/safeguards" class="{{TopNavSafeIsSelected}}") 安全保障
+      a.my-account(href='#') 我的账户

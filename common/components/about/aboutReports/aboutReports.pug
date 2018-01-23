@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block head
+  title 运营报告
+block body
+  div.about-content-part
+    div.about-wrap
+      include ../leftNav/leftNav.pug
+      div.right-content
+        div.about-reports
+          div.about-content-wrp2
+            div.title-lists
+              a(href="/aboutReportMonth.html").title.selected 运营报告
+              a(href="/aboutReportSeason.html").title 运营季报
+              a(href="/aboutReportYear.html").title 运营年报
+            block content

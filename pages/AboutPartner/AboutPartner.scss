@@ -1,0 +1,41 @@
+.about-partner-contain{
+  padding: 30px;
+  .title{
+    margin: 20px 0;
+    border-bottom: 2px solid #e2e2e2;
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid #ea5504;
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      padding: 10px 0;
+      margin-bottom: -2px;
+    }
+  }
+
+  .item{
+      overflow: hidden;
+      padding: 62px 0 10px;
+      border-bottom: 2px solid #ccc;
+    img{
+      width: 300px;
+    }
+    .introduce{
+      float: right;
+      width:626px;
+      p:first-child{
+        margin: 0;
+        font-size: 24px;
+        color: #ff6f20
+      }
+      p:last-child{
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        padding: 0 18px;
+      }
+    }
+  }
+}

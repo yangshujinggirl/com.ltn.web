@@ -1,0 +1,65 @@
+.top-nav-wrap{
+  width: 100%;
+  background: #fff;
+  .top-nav-content{
+    max-width: 1190px;
+    margin: 0 auto;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    .left{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -24px;
+      a{
+        display: block;
+        overflow: hidden;
+      }
+      .logo-img {
+        width: 118px;
+        height: auto;
+        margin-right: 10px;
+      }
+    }
+    .right{
+      position: absolute;
+      right: 0;
+      a{
+        width: 96px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        color: #333;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        box-sizing: border-box;
+        border-bottom: 4px solid transparent;
+      }
+      .my-account{
+        width: 110px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #ff6f20;
+        margin-left: 16px;
+        color: #fff;
+        border-bottom: none;
+      }
+      .nav-item:hover{
+        color: #f60;
+        border-bottom: 3px solid #f60;
+      }
+      .selected{
+        color: #f60;
+        border-bottom: 3px solid #f60;
+      }
+    }
+  }
+}
+.is-sticky{
+  .top-nav-wrap{
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  }
+}

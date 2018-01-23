@@ -1,0 +1,140 @@
+.squqre-dancing-pages {
+  background-color: #fff;
+  .wrap {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .banner {
+    width: 100%;
+    height: 480px;
+    background: url('./imgs/banner.jpg') no-repeat center;
+  }
+  .c-header {
+    width: 230px;
+    text-align: center;
+    font-size: 24px;
+    color: #f60;
+    position: relative;
+    margin: 0 auto 40px;
+    &:before,&:after {
+      content:'';
+      width: 32px;
+      height: 1px;
+      background-color: #f60;
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+  .conten-one {
+    padding: 70px 0;
+    .c-text {
+      color: #5f5148;
+      line-height: 150%;
+      font-size: 20px;
+      margin: 0 0 40px;
+    }
+    .code-list {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 100px;
+      color: #333;
+      .item {
+        display: inline-block;
+        vertical-align: top;
+        &:not(:last-child) {
+          margin-right: 132px;
+        }
+      }
+    }
+    .process {
+      // text-align: center;
+    }
+    .step-content {
+      padding: 40px 0 135px;
+      color: #5f5148;
+      p {
+        margin: 0;
+      }
+      .title {
+        font-style:italic;
+        color: #f60;
+        font-size: 24px;
+        margin-bottom: 20px;
+        .big {
+          font-size: 48px;
+        }
+      }
+      .step-one {
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+      }
+      .step-text {
+        font-size: 20px;
+        line-height: 150%;
+      }
+    }
+    .award-list {
+      text-align: center;
+      p {
+        margin: 0;
+      }
+      .item {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+        color: #f60;
+        &:not(:last-child) {
+          margin-right: 60px;
+        }
+      }
+      .big {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+    }
+    .award-intruduction {
+      text-align: center;
+      font-size: 14px;
+      color: #5f5148;
+      padding: 30px 0;
+      p {
+        margin: 0;
+      }
+      .leve-one {
+        font-size: 20px;
+      }
+      .leve-two {
+        font-size: 20px;
+        color: #f60;
+        margin: 10px 0;
+      }
+      .leve-thr {
+        margin-bottom: 30px;
+      }
+    }
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      margin:0 0 80px;
+    }
+    .slogin-pic {
+      text-align: center;
+    }
+    .main-slgoin  {
+      text-align: center;
+      font-size: 14px;
+      color: #5f5148;
+      padding: 30px 0;
+    }
+  }
+}

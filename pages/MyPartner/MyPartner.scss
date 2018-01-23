@@ -1,0 +1,85 @@
+.my-partner-wrap{
+  .banner{
+    line-height: 0;
+    img{
+      width: 100%;
+    }
+  }
+  .partner-content-wrap{
+    width: 1190px;
+    margin: 60px auto 72px;
+    p{margin: 0;}
+    .what-partner-contain{
+      background: #fff;
+      border-radius: 10px;
+      padding: 55px 35px;
+      .coin-title{
+        font-size: 36px;
+        color: #ff373a;
+        text-align: center;
+        font-weight: 700;
+        span{
+          vertical-align: super;
+          margin-left: 16px;
+        }
+      }
+      .con-one{
+        margin-top: 30px;
+        .text-contain{
+          display: inline-block;
+          width: 900px;
+          padding: 54px 70px;
+          background: url('./imgs/plan_bg.png') no-repeat;
+          color: #9d3b00;
+          vertical-align: top;
+          span{
+            font-size: 20px;
+            &:first-child{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .con-two{
+        width: 955px;
+        margin: 45px auto;
+        ul{
+          display: inline-block;
+          line-height: 45px;
+          font-size: 16px;
+          li{
+            .left{
+              width: 130px;
+              height: 45px;
+              display: inline-block;
+              background: #f3f3f3;
+              text-align: center;
+              border-bottom: 1px solid #fff;
+              border-right: 1px solid #fff;
+            }
+            .right{
+              width: 530px;
+              height: 45px;
+              display: inline-block;
+              background: #f3f3f3;
+              border-bottom: 1px solid #fff;
+              text-indent: 10px;
+            }
+          }
+        }
+        .name{
+          font-size: 24px;
+          width: 24px;
+          display: inline-block;
+          line-height: 30px;
+          vertical-align: top;
+          margin-top: 30px;
+          margin-right: 10px;
+        }
+        .boy{
+          margin-left: 60px;
+        }
+      }
+    }
+  }
+}

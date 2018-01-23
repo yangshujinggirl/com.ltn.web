@@ -1,0 +1,312 @@
+extends ../../common/pages/layout.pug
+block head
+  title 安全保障
+block body
+  .safe-page-wrap
+    .banner
+      .title
+        h3 八大风控 领航财富
+        h6 更安全的我们&nbsp;&nbsp;只为更好的你
+      .cover
+    .nav-wrap
+      .nav
+        span(index='0' p-item='p1') 八大风控
+        span(index='1' p-item='p2') 资产优质
+        span(index='2' p-item='p3') 账户安全
+        span(index='3' p-item='p4') 规范运营
+        span(index='4' p-item='p5') 平台实力
+        span(index='5' p-item='p6') 技术安全
+        i
+    //- 八大风控
+    .p-content
+      .p1
+        .content
+          h4 八大风控
+        .scrroll-wrap
+          .scroll-content
+            .scroll.clearfix(startIndex=0 maxIndex=1)
+              .item
+                .mask
+                  img(src=require('./imgs/01/2.png'))
+                  h4 央行征信系统
+                  span.line
+                  p 通过个人基本信息、账单信息、信贷记录、逾期记录等角度，评估借款人履约意愿、履约能力和履约稳定性，保障项目安全。
+              .item
+                .mask
+                  img(src=require('./imgs/01/4.png'))
+                  h4 第三方大数据征信
+                  span.line
+                  p 采用芝麻信用、聚信立、同盾、有盾、易保全和致诚阿福等，利用风险数据建模、风险数据判断，通过信用评分，风险速查，运营商解析，信用卡解析，电商账户解析，引入互联网行为轨迹记录、社交和客户评价等数据全方位审核借款人，建立反欺诈决策引擎。
+              .item
+                .mask
+                  img(src=require('./imgs/01/6.png'))
+                  h4 专业风控评审团
+                  span.line
+                  p 专业银行信审从业人员组成的信贷风险管理部及操作风险管理部，每一个借款项目需要经过12道人工审核程序。
+              .item
+                .mask
+                  img(src=require('./imgs/01/8.png'))
+                  h4 实地项目调查
+                  span.line
+                  p 对合作商户渠道进行实地考察，收集实景照片实景照片和视频、相关证照、财务资料、资信资料等，保障渠道和借款人业务真实有效
+              .item
+                .mask
+                  img(src=require('./imgs/01/10.png'))
+                  h4 领投鸟安全信用决策体系
+                  span.line
+                  p 项目评审会根据领投鸟内部风险评估体系，进行精算和二次审核，决定是否立项。评审会项目通过率平均为3.5%。
+              .item
+                .mask
+                  img(src=require('./imgs/01/12.png'))
+                  h4 风险监测与预警
+                  span.line
+                  p 识别欺诈和伪冒，进行后续预警和调查，实时调整风险策略，实现贷中风险的系统自动判定和识别，提前转入催收、加入黑名单等管控措施，有效控制贷中风险。
+              .item
+                .mask
+                  img(src=require('./imgs/01/14.png'))
+                  h4 完善的催收体系
+                  span.line
+                  p 通过项目到期前短信提醒，逾期初期采用电催、上门催收方式，如借款人还不还款，则采取法院诉讼、网络仲裁等手段，并上报征信系统。
+              .item
+                .mask
+                  img(src=require('./imgs/01/16.png'))
+                  h4 极速回款
+                  span.line
+                  p 如发生逾期，领投鸟将先行回款给投资人，保障投资人利益。
+            .arrow.left-arrow
+              span.ltn-iconfont.icon-fanhui
+            .arrow.right-arrow
+              span.ltn-iconfont.icon-gengduo
+        .content
+          h4 12项资料审核
+        .banner-middle
+      //- 资产优质
+      .p2
+        .content
+          h4 三重把控资产为您保驾护航
+          .item-wrap.one
+            .protal
+              .line
+              h4 贷前
+              p 央行征信数据、三方大数据风控、实地调查项目、专业风控评审团、领投鸟安全信用决策体系。
+            .scroll.clearfix(startIndex=0 maxIndex=2)
+              .item
+                .img
+                h5 高标准甄选
+                p 执行严格的信贷政策；细分借款用户群体；过滤高风险行业。
+              .item
+                .img
+                h5 反欺诈分析
+                p 类银行级反欺诈作业；结合大数据分析，辨别信息真伪。
+              .item
+                .img
+                h5 实地调查项目真伪
+                p 对合作商户渠道进行实地考察，收集实景照片和视频、相关证照、财务资料、资信资料等，保障渠道和借款人业务真实有效。
+              .item
+                .img
+                h5 对接征信大数据
+                p 对接央行征信数据，引入第三方大数据征信，通过互联网行为轨迹记录、社交和客户评价等数据全方位审核。
+              .item
+                .img
+                h5 12项材料级级审查
+                p 专业银行信审风控团队；材料逐一审查，多层审核程序，全方位覆盖风险点。
+            .arrow.left-arrow
+              span.ltn-iconfont.icon-fanhui
+            .arrow.right-arrow
+              span.ltn-iconfont.icon-gengduo
+          .item-wrap.two
+            .protal
+              .line
+              h4 贷中
+              p 风险预警机制：识别欺诈和伪冒，进行后续预警和调查，并对借款人账户进行时时的管控，实时调整风险策略，实现贷中风险的系统自动判定和识别。
+            .scroll.clearfix
+              .item
+                .img
+                h5 异常监测
+                p 实时调整风险策略，实现贷中风险的系统自动判定和识别。
+              .item
+                .img
+                h5 风险预警
+                p 贷中风险预警，提前转入催收、加入黑名单等管控措施，有效控制贷中风险。
+          .item-wrap.three
+            .protal
+              .line
+              h4 贷后
+              p 完善的催收体系：短信提醒、人工催收、第三方催收、法院诉讼及征信系统，保障资金安全回收 。
+            .scroll.clearfix(startIndex=0 maxIndex=1)
+              .item
+                .img
+                h5 到期前
+                p 短信提醒&电话提醒
+              .item
+                .img
+                h5 逾期初
+                p 电话催收&上门催收
+              .item
+                .img
+                h5 严重逾期
+                p 法院诉讼&网络仲裁
+              .item
+                .img
+                h5 严重逾期
+                p 上报征信系统
+            .arrow.left-arrow
+              span.ltn-iconfont.icon-fanhui
+            .arrow.right-arrow
+              span.ltn-iconfont.icon-gengduo
+        .banner-middle
+          h4 业务简介
+          p 领投鸟资产端对接女性多场景金融消费分期业务，围绕医美、女性商品等消费场景下，提供消费金融服务。消费者先提前享用产品与服务，按月分期还本付息给投资人。投资人通过资金的出借获得利息收益。
+        .business
+          h4 业务模式
+          img(src=require('./imgs/02/1.png'))
+      //- 账户安全
+      .p3
+        .content
+          h4 平台不触碰您的资金
+          img(src=require('./imgs/03/1.png'))
+        .banner-middle
+          .text-content
+            .left
+              span.din-font 3.5
+                i %
+              p 平均通过率
+            .right
+              p 平台不触碰资金，保障您的资金安全； 
+              p 您的钱只能通过账户存管系统流向借款人的账户；
+              p 您的每一笔充值、申购、回款、提现等交易都有据可查；
+              p 电子合同接入，清晰流水，资金流向笔笔可查透明清晰；
+              p 资金逾期极速回款，保护投资人利益。
+        .safe
+          h4 全方位保护您的账户安全
+          .text-content
+            div
+              .one
+                h5 01.
+                h6 多重密码保护 
+                p 手势密码、登录密码、支付密码多重保护。
+            div.float-wrap.clearfix
+              .two
+                h5 02.
+                h6 实名认证银行卡
+                p 提现只能使用与身份证实名验证绑定的银行卡，即使账户丢失、手机丢失，您的钱谁都拿不走。 
+              .three
+                h5 03.
+                h6 全方位技术保障
+                p 我们采用先进的系统加密及保护技术，并由专人24小时严密监控，保障用户账户信息安全。 
+      //- 规范运营
+      .p4
+        .content
+          h4 领投鸟财务审计情况
+          img(src=require('./imgs/04/1.png'))
+          img(src=require('./imgs/04/2.png'))
+          img(src=require('./imgs/04/3.png'))
+        .banner-middle
+          p 
+            img(src=require('./imgs/04/5.png'))
+            span 上海中惠会计事务所有限公司
+            | 于1988年8月成立。在国家工商行政管理局注册登记，属全国性的会计事务所和资产评估所的综合性的中介机构，可在全国省、市、自治区执业。上海中惠会计事务所有限公司于1991年取得国家国有资产管理局颁发的《资产评估资格证书》并于1993年取得中国证券监督管理委员会和国家国有资产管理局颁发的《从事证券业务资产评估许可证》。除此之外，上海中惠会计事务所有限公司实在浦东新区设立的第一家会计事务所，是上海市具有大型国有企业年度财务会计报告审计资格的30家会计事务所之一。 
+        .text-warp-one
+          h4 我们所做的事均有法可依 
+          p 依据《合同法》、《电子签名法》、《关于人民法院审理借贷案件的若干意见》，领投鸟提供居间撮合服务明确合法，领投鸟提供的电子合同合法并具合同效力，申购人通过领投鸟获得的出借理财收益为合法收益并受到法律保护。详情如下： 
+          h5 1.贷款人及借款人借贷关系合法合规 
+          p 根据《合同法》第196条规定"借款合同是借款人向贷款人借款，到期返还借款并支付利息的合同"，《合同法》允许普通民事主体之间发生借贷关系，并允许出借方到期可以收回本金和符合法律规定的利息
+          h5 2.领投鸟提供居间撮合服务合法合规
+          p 根据《合同法》第23章关于"居间合同"的规定，特别是第424条规定的"居间合同是居间人向委托人报告订立合同的机会或者提供订立合同的媒介服务，委托人支付报酬的合同"，领投鸟为民间借贷提供撮合借贷双方形成借贷关系的居间服务有着明确的法律基础。
+          h5 3.电子签名及电子合同具有法律效力 
+          p 根据《电子签名法》的规定，民事活动中的合同或者其他文件、单证等文书，当事人可以约定使用电子签名、数据电文，不能因为合同采用电子签名、数据电文就否定其法律效力。同时，《电子签名法》中还规定，可靠的电子签名与手写签名或者盖章具有同等的法律效力，明确肯定了符合条件的电子签名与手写签名或盖章具有同等的效力。
+          h5 4.出借理财收益合法合规
+          p 根据最高人民法院《关于人民法院审理借贷案件的若干意见》第6条："民间借贷的利率可以适当高于银行的利率，各地人民法院可以根据本地区的实际情况具体掌握，但最高不得超过银行同类贷款利率的四倍。超出此限度的，超出部分的利息不予保护。"当期人民银行一年期基准贷款利率为6.00%，则当期基准贷款利率的四倍为24.00%，领投鸟的出借理财收益低于24.00%，为合法利息收益，受到法律保护。        
+        .bg-wrap
+          .text-warp-two
+            h4 实力强大的法务团队 
+            p 目前，公司拥有一支由法学理论功底扎实、丰富的法律工作经验，擅长处理经济纠纷类案件的专家团队组建，拥有成熟的法律思维和敏锐的风险意识，秉承认真、严谨、务实、负责的工作作风，为公司及投资人保障利益，建立起强而有力的风险防控体系。  
+          .img-wrap
+            img(src=require('./imgs/04/7.png'))       
+      //- 平台实力
+      .p5
+        .content
+          h4 平台荣誉
+        .text-wrap
+          .text-one
+            h5 注册资金
+              span 1
+              | 亿
+            p 2017年8月10日，领投鸟注册资本从5000万元增加至1亿元，不断自我规约自律，始终遵从合规、透明、稳定的发展理念。
+            h5.margin 稳定运营
+              span 2
+              | 年
+            p 自2015年成立以来，领投鸟坚持合规经营，严把风控，秉承“珍视家庭，开放创新，成就客户”的经营理念，历史本息兑付率100%。
+          .img-wrap.clearfix
+            img(src=require('./imgs/05/2.png'))
+            img(src=require('./imgs/05/3.png'))
+            img(src=require('./imgs/05/4.png'))
+            img(src=require('./imgs/05/5.png'))
+            img(src=require('./imgs/05/6.png'))
+            img(src=require('./imgs/05/8.png'))
+            img(src=require('./imgs/05/7.png'))
+            img(src=require('./imgs/05/9.png'))
+            img(src=require('./imgs/05/10.png'))
+        .banner-middle
+          h4 背景是最强的实力
+          p 红糖集团是拥有大规模实体产业的综合性集团，作为新一代智能物业运营商，集团已初步构建起“智能科技、物业运营、消费升级、金融服务”四大轮动的发展模式，红糖金服作为红糖集团实体产业的延伸，致力于打造稳健的互联网金融信息平台。
+        .content
+          h4 被主流媒体广泛报道
+        .news-wrap
+          .news-nav
+            img(src=require('./imgs/05/13.png') data-src=require('./imgs/05/12.png') data-list="one")
+            img(src=require('./imgs/05/18.png') data-src=require('./imgs/05/17.png') data-list="two")
+          .news-list.one
+            .item.clearfix
+              img(src=require('./imgs/05/14.png'))
+              .text-one-wrap
+                h5 领投鸟斩获东方财经”最具风控力奖” 
+                p 11月29日，领投鸟董事长章瑞瑞先生受邀出席东方财经主办的“2017东方财经实体经济与创新金融年度盛典”。并与中国金融改革研究院院长刘胜军、软银中国管理合伙人宋安澜、达晨创投董事总经理高洪庆等众多行业精英，共同对话当前中国实体经济和金融创新话题，力求共同见证科技创新对互联网金融的成长与发展。
+          .news-list.two
+            .item.clearfix
+              img(src=require('./imgs/05/19.png'))
+              .text-one-wrap
+                h5 领投鸟携手第三方征信平台，助力大数据征信 
+                p 上海2017年3月24日电 /美通社/ -- 随着互联网金融企业对更多场景的渗透，大数据征信将释放出更大的信息价值。近日，领投鸟携手大圣数据、芝麻信用分，利用第三方征信平台加大对大数据的利用，力求做好风控，从而有利于领投鸟平台的长远发展。
+        .bg-wrap
+          .text-warp-two
+            h4 有实力的团队，铸就实力未来  
+          .img-wrap
+            img(src=require('./imgs/05/21.png'))  
+      //- 技术安全
+      .p6
+        .content
+          h4 技术保障
+        .text-one
+          h5 资深的研发团队
+          p 领投鸟技术团队来自银行以及BAT等知名公司，为你的账户安全、资金安全和信息安全提供全方位保障。
+          h5 高效的运维监测
+          p 系统监测账户，高效灵活的报警机制，若发生异常访问或登录时，及时锁定账户及账户资金，全面保障用户信息及资金安全。
+          h5 专业的安全系统
+          p 领投鸟平台为自主开发，日常升级维护通过堡垒机集中管控，有效避免运维安全问题，定期通过第三方权威机构进行渗透测试确保平台信息系统持续安全可靠。
+          h5 完善的灾备系统
+          p 设立灾备中心，数据实时同步备份及设备支持，建立起完善的灾备体系和业务连续性保障体系。
+        .content
+          h4 隐私安全
+        img(src=require('./imgs/06.png'))
+        .text-two
+          | 对客户提供的信息全面保护，除客户事先同意，或应政府及上级监管机构的要求而披露之外，不会向任何外部机构披露。
+        .content
+          h4 网络安全
+        .text-three
+          | 领投鸟运用业内领先的安全技术，保护用户在领投鸟账户中存储的个人信息安全。并采用SSL传输加密、密码加密、堡垒机审计、网络隔离等数十种安全服务的保护措施，7*24小时不间断地确保交易数据安全。
+        .text-three
+          | 系统在建设过程中对系统定级、方案设计、产品采购、软件开发、工程实施、测试验收、系统交付等阶段进行了科学的实施和规范的管理。基础设施齐全且物理环境良好，网络整体结构合理，能根据各部门的工作职能、重要性和所涉及信息的重要程度等因素，划分不同的Vlan。在数据保护方面建立双机储存阵列，实现实时备份，总体而言，领投鸟系统总体安全保护状况良好。
+    .footer
+      .zhuce
+        h4 注册领取618元
+        a(href="/html/user/register" target="_blank") 立即注册
+  //- 侧边栏的悬浮按钮
+  .slidebar-wrap
+    .wrap
+      span.ltn-iconfont.icon-kefu
+      span.text 在线咨询
+    span.ltn-iconfont.icon-qcode
+      img(src=require('./imgs/code-weixin.png'))
+      i.text-shaoma 扫码关注
+    .ltn-iconfont.icon-top-arrow

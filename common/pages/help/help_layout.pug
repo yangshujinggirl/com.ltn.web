@@ -1,0 +1,84 @@
+//- 帮助中心的默认布局
+//- 1. 集成主的 布局模板
+extends ../layout.pug
+
+block body
+  block menu
+  div.help-mian-wrap.clearfix
+    ui.left
+      li.title 常见问题
+      if act === 1
+        li.href.selected
+          a(href='/help/aboutltn') 关于领投鸟
+      else
+        li.href
+          a(href='/help/aboutltn') 关于领投鸟
+      if act === 2
+        li.href.selected
+          a(href='/help/login') 登录注册
+      else
+        li.href
+          a(href='/help/login') 登录注册
+      if act === 3
+        li.href.selected
+          a(href='/help/certificate') 开户绑卡
+      else
+        li.href
+          a(href='/help/certificate') 开户绑卡
+      if act === 4
+        li.href.selected
+          a(href='/help/trade') 充值提现
+      else
+        li.href
+          a(href='/help/trade') 充值提现
+      if act === 5
+        li.href.selected
+          a(href='/help/invest') 投资还款
+      else
+        li.href
+          a(href='/help/invest') 投资还款
+      if act === 6
+        li.href.selected
+          a(href='/help/account') 账户安全
+      else
+        li.href
+          a(href='/help/account') 账户安全
+      if act === 7
+        li.href.selected
+          a(href='/help/ticket') 理财金券
+      else
+        li.href
+          a(href='/help/ticket') 理财金券
+      li.title 更多问题
+        if act === 8
+          li.href.selected
+            a(href='/help/glossary') 名词解释
+        else
+          li.href
+            a(href='/help/glossary') 名词解释
+        if act === 9
+          li.href.selected
+            a(href='/help/product') 产品介绍
+        else
+          li.href
+            a(href='/help/product') 产品介绍
+        if act === 10
+          li.href.selected
+            a(href='/help/activity') 活动介绍
+        else
+          li.href
+            a(href='/help/activity') 活动介绍
+    div.middle-content
+      block help-content
+    div.right
+      h4.title 客服电话
+      div.text-content
+        p.num 400-999-9980
+        p.sub (工作时间：周一至周日 9:30-18:30)
+        p.btn 客服热线
+      h4.title 关注我们
+      div.img-wrap
+        img(src=require('./imgs/code.png'))
+      a.wb-btn(href="http://weibo.com/u/5818072930" target="_blank")
+        img(src=require('./imgs/xinlang.png'))
+        span 关注我们

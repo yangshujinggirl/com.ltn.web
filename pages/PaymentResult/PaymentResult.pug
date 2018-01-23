@@ -1,0 +1,65 @@
+extends ../../common/pages/layout.pug
+block head
+  | {% if(type=="success") %}
+  title 支付成功
+  | {% else %}
+  title 支付失败
+  | {% endif %}
+block body
+  .finance-pay-result-wrap
+    .top-crumb-wrap.clearfix
+      .bread-crumb-contain
+        a(href="/") 首页
+        a(href="{{productDetail.crumbUrl}}") 投资
+        span {{productDetail.productName}}
+      ul.broadcast-contain
+        | {% for message in messageList %}
+        li {{message}}
+        | {% endfor %}
+    .result-contain-wrap
+      .result-left-contain(class="{% if(type=='defeat') %}defeat{% endif %}")
+        | {% if(type=="success") %}
+        h3 支付成功
+        p.pay-money {{productDetail.realPayMoney}}
+          span 元
+        | {% else %}
+        h3 支付失败
+        p.error-mes
+        | {% endif %}
+        .btn-contain
+          | {% if(type=="success") %}
+          a(href="/account/#/account/trackReacord") 完成
+          a(href="/finance/list/0/1/0/0") 继续投资
+          | {% else %}
+          a.go-repay 重新支付
+          a(href="/help/invest") 查看帮助
+          |{% endif %}
+        p.instruction-text 领投鸟不会以任何理由要求您提供银行卡信息或支付额外费用请谨防钓鱼链接或诈骗电话。
+      .result-right-contain
+        p
+          | 项目名称：
+          span {{productDetail.productName}}
+        p
+          | 年化收益：
+          span {{productDetail.annualIncomeText}}
+        p
+          | 持有金额：
+          span.have-money {{productDetail.investMoney}}元
+        p
+          | 投资时间：
+          span {{productDetail.orderTime}}
+        p
+          | 计息方式：
+          span 起息日计算
+        p
+          | 回款方式：
+          span {{productDetail.repaymentType}}
+        p
+          | 预期收益：
+          span {{productDetail.preIncome}}元
+        p
+          | 到期时间：
+          span {{productDetail.endDate}}
+        .app-icon-contain
+          img(src=require('./imgs/code-icon.png') alt="领投鸟APP二维码")
+          p 通过领投鸟APP随时查看收益

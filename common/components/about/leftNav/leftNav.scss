@@ -1,0 +1,40 @@
+.about-left-nav {
+  vertical-align: top;
+  display: table-cell;
+  width: 178px;
+  border-right: 1px solid #d7d7d7;
+  background-color: #fcfcfc;
+  box-sizing: border-box;
+  padding: 20px 0;
+  .about-type {
+    height: 40px;
+    padding-left: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+    &:before {
+      content: '';
+      width: 3px;
+      height: 18px;
+      background-color: #ff5a00;
+      line-height: 20px;
+      position: absolute;
+      left: 20px;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+  .nav-list {
+    .nav-item {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      padding-left: 30px;
+      border-right: #d7d7d7;
+      border-top: 1px solid #fcfcfc;
+      border-bottom: 1px solid #fcfcfc;
+    }
+  }
+}

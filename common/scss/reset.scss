@@ -1,0 +1,85 @@
+/*******************************
+             Reset
+*******************************/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font-size: 14px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  min-width: 1190px;
+  background: #f5f6f7;
+  font-family: 'PingFangSC','Lato','Helvetica Neue', Arial, Helvetica, 'Microsoft Yahei', 微软雅黑, sans-serif;
+  font-size: 14px;
+  line-height: 1.4285em;
+  color: #6a6a6a;
+  font-smoothing: antialiased;
+}
+button{
+  &:focus {
+    outline: none;
+  }
+}

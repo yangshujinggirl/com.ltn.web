@@ -1,0 +1,16 @@
+//- 集成关于我们布局
+extends ../../common/pages/about/about_layout.pug
+block head
+  title {{lastAnnouncement.title}}
+//- 设置模板参数
+block menu
+  - var act =6
+block about-content
+  div.about-notice-detail-content
+    p.title.clearfix
+      span 公告详情
+      a(href="/about/notice").more 返回列表
+    div.html-content
+      h4 {{lastAnnouncement.title}}
+      h6 {{lastAnnouncement.publishTime}}
+      div.text {{lastAnnouncement.content | safe}}

@@ -1,0 +1,45 @@
+//- 集成帮助中心布局
+extends ../../common/pages/help/help_layout.pug
+block head
+  title 帮助中心 名词解释
+//- 设置模板参数
+block menu
+  - var act =8
+block help-content
+  div.help-about
+    div.help-title
+      span 名词解释
+    div.glossary-contain
+      span.selected(name='jiekuan') 借款人
+      span(name='touziren') 投资人
+      span(name='zhaiquan') 债权人
+      span(name='liebiao') 投资列表
+      span(name='muji') 募集
+      span(name='touzi') 投资
+      span(name='toubiao') 投标金额
+      span(name='dongjie') 冻结金额
+      span(name='zhanghu') 账户总资产
+      span(name='yuqi') 预期总收益
+      span(name='leitou') 累计投资
+      span(name='leishouyi') 累计收益
+      span(name='daishou') 待收总额
+      span(name='daishouyi') 待收收益
+      span(name='jinxing') 进行中项目
+      span(name='wancheng') 已完成项目
+    div.glossary-text
+      p.jiekuan 也称贷款人，是指已经或准备在网站上进行贷款活动的用户。凡22周岁以上的中国大陆地区公民，都可以成为借款人。
+      p.touziren(style='display:none') 也称投资人，是指已经或准备在网站上进行出借活动的用户。凡18周岁以上的中国大陆地区公民，都可以成为理财人。
+      p.zhaiquan(style='display:none') 债的关系中有权利要求另一方（债务人）为或不为一定行为的当事人。
+      p.liebiao(style='display:none') 当借款人成功发布一个借款请求时，我们将包含各种借款信息的该请求称为一个投资列表。
+      p.muji(style='display:none') 是指理财人将其账户内指定的金额出借给其指定的借款项目的行为。
+      p.touzi(style='display:none') 是指理财人将其账户内指定的金额出借给其指定的借款列表的行为。
+      p.toubiao(style='display:none') 是指理财人对借款列表进行投标的金额。
+      p.dongjie(style='display:none') 用户对某借款列表进行投标后，在此列表的招标期结束之前，这部分投标金额将被锁定，“冻结金额”是指因这类型锁定金额的总额。 如果列表放款，这部分金额将转给该列表的借款人；如果该列表流标，这部分金额将立即变为用户的可用金额。
+      p.zhanghu(style='display:none') 账户总资产=可用余额+投资中冻结金额+提现中冻结金额+待收总额。
+      p.yuqi(style='display:none') 预期总收益=累计收益+待收收益。
+      p.leitou(style='display:none') 累计已投资项目的投资本金总额。
+      p.leishouyi(style='display:none') 累计已完成投资项目的收益总额。
+      p.daishou(style='display:none') 还款中投资项目的待收本金加待收收益。还款中投资项目的待收本金加待收收益。
+      p.daishouyi(style='display:none') 还款总投资项目的待收收益。
+      p.jinxing(style='display:none') 进行中的项目=还款中的项目+筹款中的项目。
+      p.wancheng(style='display:none') 投资项目已结束并成功还款的投资项目。

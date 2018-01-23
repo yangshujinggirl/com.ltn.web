@@ -1,0 +1,42 @@
+// 平台荣誉 样式文件
+.about-mian-wrap{
+  .about-honor-content{
+    padding: 30px;
+    padding-top: 0;
+    .title{
+      margin: 20px 0;
+      border-bottom: 2px solid #e2e2e2;
+      span{
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 2px solid #ea5504;
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: -2px;
+      }
+    }
+    .honor-img-list{
+      .item-wrap{
+        float: left;
+        float: left;
+        width: 50%;
+        text-align: center;
+      }
+      .item{
+        margin-bottom: 30px;
+        img{
+          width: 100%;
+          max-width: 350px;
+        }
+        p{
+          max-width:350px;
+          margin: 0 auto; 
+          margin-top: 10px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

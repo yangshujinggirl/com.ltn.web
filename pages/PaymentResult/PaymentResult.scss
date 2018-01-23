@@ -1,0 +1,122 @@
+.finance-pay-result-wrap{
+  width: 1190px;
+  margin: 0 auto;
+  margin-bottom: 294px;
+  p{margin: 0;}
+  .top-crumb-wrap{
+    font-size: 14px;
+    color: #6a6a6a;
+    .bread-crumb-contain{
+      display: inline-block;
+      padding: 18.5px 40px;
+      a{color: #6a6a6a;}
+      a:after {
+        content: ">";
+        padding: 0 10px;
+      }
+    }
+    .broadcast-contain{
+      background: url('./imgs/icon-prod-notice.png') left center no-repeat;
+      display: inline-block;
+      padding: 0 20px 0 25px;
+      margin: 18.5px 0;
+      float: right;
+      font-size: 12px;
+      height: 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      width: 480px;
+    }
+  }
+  .result-contain-wrap{
+    background: #fff;
+    .result-left-contain{
+      display: inline-block;
+      width: 490px;
+      padding: 60px 80px 74px;
+      height: 390px;
+      vertical-align: top;
+      background: #8bc34a;
+      text-align: center;
+      h3{
+        font-size: 48px;
+        color: #fff;
+        line-height: 48px;
+        margin: 0;
+      }
+      .pay-money{
+        margin-top: 30px;
+        font-size: 24px;
+        color: #fdff01;
+        span{font-size: 16px;}
+      }
+      .error-mes{
+        margin-top: 30px;
+        color: #f60;
+      }
+      .btn-contain{
+        margin-top: 32px;
+        a{
+          cursor: pointer;
+          display: inline-block;
+          width: 130px;
+          border: 1px solid #fff;
+          height: 40px;
+          line-height: 40px;
+          color: #fff;
+          &:first-child{
+            margin-right: 20px;
+          }
+        }
+      }
+      .instruction-text{
+        margin-top: 45px;
+        font-size: 12px;
+        color: #333;
+      }
+    }
+    .result-left-contain.defeat{
+      background: #eee;
+      h3{color: #333;}
+      .pay-money{color: #f60;}
+      .btn-contain{
+        a{
+          border: 1px solid #f60;
+          color: #f60;
+          &:first-child{
+            background: #f60;
+            color: #fff;
+          }
+        }
+      }
+      .instruction-text{
+        color: #999;
+      }
+    }
+    .result-right-contain{
+    display: inline-block;
+    width: 697px;
+    position: relative;
+    height: 390px;
+    padding: 48px 56px;
+    color: #999;
+    p{
+      margin-top: 8px;
+    }
+    span{color: #333;}
+    .app-icon-contain{
+      position: absolute;
+      width: 90px;
+      height: 126px;
+      right: 40px;
+      bottom: 30px;
+      color: #333;
+      p{
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
+  }
+}

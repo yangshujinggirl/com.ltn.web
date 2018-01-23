@@ -1,0 +1,83 @@
+extends ../../common/pages/layout.pug
+block head
+  title 下载App
+block body
+  div.download-app-wrap
+    div.g-banner
+      div.g-banner-contain
+        div.go-download
+          p.slogan-text 生活不易
+          p.slogan-text 让赚钱更安心
+          div.g-btn-list
+            a.go-terminal(href='https://itunes.apple.com/cn/app/ling-tou-niao-li-cai/id1073508943?mt=8')
+              img(src=require('./imgs/phone0.png') alt='iphone下载地址')
+              | iphone
+            a.go-terminal(href='http://apk.lingtouniao.com/app/lingtouniao.apk')
+              img(src=require('./imgs/phone1.png') alt='安卓下载地址')
+              | Android
+        div.new-user-welfare
+          div.l-text
+            p.quan
+              span 618
+              span 元返现券
+          div.r-code
+            img(src=require('./imgs/code.png') alt='领投鸟App扫码下载地址')
+            p 首次下载领投鸟APP即享
+    div.part-same.part-one
+      div.part-wrap
+        div.g-left.left-one
+          div.same-type-content
+            p.title 优质资产
+            div.info
+              p.ite 高保值不动产
+              p.ite 银行批贷项目
+        div.g-right.right-one
+          img(src=require('./imgs/partOne0.jpg') alt="理财")
+    div.part-same.part-two
+      div.left-content
+      div.right-content
+      div.center-content
+        div.same-type-content.content-two
+          p.title 灵活存取
+          div.info
+            p.ite 3-180天产品多元化
+            p.ite 资金零闲置
+    div.part-same.part-thr
+      div.left-content
+      div.right-content
+      div.center-content
+        div.same-type-content.content-thr
+            p.title 多重保障
+            div.info
+              p.ite 资金三方托管
+              p.ite 百人风控团队全面审核
+    div.part-same.part-four
+      div.part-wrap
+        div.g-right.right-last
+            img(src=require('./imgs/partFour0.jpg') alt="理财")
+        div.g-left.content-four
+          div.same-type-content
+              p.title 合伙赚钱
+              div.info
+                p.ite 邀请好友一起投
+                p.ite 平台奖励天天有
+    div.fooer-content(style="display: none;")
+      div.footer-wrap
+        div.texts
+          p.title 领投鸟理财 手机扫一扫
+          p.send 加入就送618元返现券
+        img(src=require("./imgs/logo.png") alt="logo")
+        div.con
+          p.app-scan APP专享
+          p.app-scan 扫描下载
+        img(src=require("./imgs/code.png") alt="code")
+      span.close-btn
+  //- 侧边栏的悬浮按钮
+  .slidebar-wrap
+    .wrap
+      span.ltn-iconfont.icon-kefu
+      span.text 在线咨询
+    span.ltn-iconfont.icon-qcode
+      img(src=require('./imgs/code-weixin.png'))
+      i.text-shaoma 扫码关注
+    .ltn-iconfont.icon-top-arrow

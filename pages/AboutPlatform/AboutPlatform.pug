@@ -1,0 +1,33 @@
+//- 集成关于我们布局
+extends ../../common/pages/about/about_layout.pug
+block head
+  title 平台介绍
+//- 设置模板参数
+block menu
+  - var act =1
+block about-content
+  div.about-platform-content
+    img.banner(src=require('./imgs/banner.png'))
+    p.title
+      span 平台介绍
+    div.text
+      p
+        | “领投鸟”（LingTouNiao.com）是红糖集团旗下互联网金融信息平台，核心团队成员来自百度、腾讯、阿里巴巴等大型互联网公司，渣打、兴业全球基金、光大证券等权威金融机构，拥有丰富的互联网和金融行业经验。坚持“诚信、严谨、专业、快捷”的经营理念，通过大数据征信、实地考察、风控评审等手段，严把风控关，充分运用科技金融、智慧金融为投资人甄选优质资产，提供稳健、透明、高效的理财服务。
+    p.title
+      span 集团实力
+    div.text
+      p
+        | 红糖集团是拥有大规模实体产业的综合性集团，作为新一代智能物业运营商， 集团已初步构建起“智能科技、物业运营、消费升级、金融服务”四大轮动的发展模式，践行价值投资理念，以家庭客户为中心，推动红糖向“全球智能物业第一品牌”的愿景稳步迈进，分享全球经济的高速成长。
+    p.title
+      span logo释义
+    div.text.logo.clearfix
+      img(src=require('./imgs/pingtailogo.jpg'))
+      | 2016年10月，领投鸟推出全新的LOGO与视觉体系： 新的LOGO从鸟和家的基本造型进行智能搭配，以“家”为中心，鸟的形象生机勃勃向上，风格简洁稳重。 LOGO整体传达了用户通过领投鸟平台专业的消费金融服务，提升家庭生活品质，从而”实现我的梦想家“的美好愿景，并赋予未来更多的想象空间。
+    p.title
+      span 平台证照
+    div.text.imglist
+      p
+        img(src=require('./imgs/pt5.jpg'))
+
+
+    

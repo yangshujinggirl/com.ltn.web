@@ -1,0 +1,39 @@
+//- 集成关于我们布局
+extends ../../common/pages/about/about_layout.pug
+block head
+  title 联系我们
+//- 设置模板参数
+block menu
+  - var act =11
+block about-content
+  div.about-contact
+    div.title 
+      span 联系我们
+    div.contact-content
+      div.map
+        img(src=require('./imgs/map.png') alt='上海市金沙江路2145号普罗娜商务广场A栋7楼')
+      div.company-info
+        div.name 上海吾悠互联网科技服务有限公司
+        span 上海市金沙江路2145号普罗娜商务广场A栋7楼
+      div.contact-title 联系我们
+      div.contact-us
+        -
+          var list = [
+              {
+                type:'客服电话',
+                value:'400-999-9980'
+              },
+              {
+                type:'电子邮箱',
+                value:'service@lingtouniao.com'
+              },
+              {
+                type:'QQ交流群',
+                value:'247441580'
+              }
+          ]
+        each ele, index in list
+          div.item
+            img(src=require('./imgs/'+index+'.png'))
+            p= ele.type 
+            p.num= ele.value  

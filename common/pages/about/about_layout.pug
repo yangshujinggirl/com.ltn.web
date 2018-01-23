@@ -1,0 +1,82 @@
+//- 帮助中心的默认布局
+//- 1. 集成主的 布局模板
+extends ../layout.pug
+block body
+  block menu
+  div.about-mian-wrap.clearfix
+    ui.left
+      li.title 关于我们
+      if act === 1
+        li.href.selected
+          a 平台介绍
+      else
+        li.href
+          a(href="/about/pltinfo") 平台介绍
+      if act === 2
+        li.href.selected
+          a 团队介绍
+      else
+        li.href
+          a(href="/about/team") 团队介绍
+      if act === 3
+        li.href.selected
+          a 平台荣誉
+      else
+        li.href
+          a(href="/about/honor") 平台荣誉
+      if act === 4
+        li.href.selected
+          a 合作伙伴
+      else
+        li.href
+          a(href="/about/partner") 合作伙伴
+      if act === 5
+        li.href.selected
+          a 品牌优势
+      else
+        li.href
+          a(href="/about/advantage") 品牌优势
+      if act === 6
+        li.href.selected
+          a(href="/about/notice") 平台公告
+      else
+        li.href
+          a(href="/about/notice") 平台公告
+      if act === 7
+        li.href.selected
+          a(href="/about/news") 媒体报道
+      else
+        li.href
+          a(href="/about/news") 媒体报道
+      if act === 8
+        li.href.selected
+          a 运营报告
+      else
+        li.href
+          a(href="/about/report") 运营报告
+      if act === 9
+        li.href.selected
+          a(href="/about/protocol") 协议范本
+      else
+        li.href
+          a(href="/about/protocol") 协议范本
+      if act === 12
+        li.href.selected
+          a(href="/about/road") 发展历程
+      else
+        li.href
+          a(href="/about/road") 发展历程    
+      if act === 10
+        li.href.selected
+          a(href="/about/join") 加入我们
+      else
+        li.href
+          a(href="/about/join") 加入我们
+      if act === 11
+        li.href.selected
+          a(href="/about/contact") 联系我们
+      else
+        li.href
+          a(href="/about/contact") 联系我们
+    div.content
+      block about-content

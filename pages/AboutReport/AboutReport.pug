@@ -1,0 +1,31 @@
+//- 集成关于我们布局
+extends ../../common/pages/about/about_layout.pug
+block head
+  title 运营月报
+//- 设置模板参数
+block menu
+  - var act =8
+block about-content
+  div.about-report
+    div.title
+      | {% if(type == 1) %}
+      a.selected 运营月报
+      a(href="/about/report?type=2") 运营季报
+      a(href="/about/report?type=3") 运营年报
+      | {% elif(type == 2) %}
+      a(href="/about/report?type=1") 运营月报
+      a.selected 运营季报
+      a(href="/about/report?type=3") 运营年报
+      | {% else %}
+      a(href="/about/report?type=1") 运营月报
+      a(href="/about/report?type=2") 运营季报
+      a.selected 运营年报
+      | {% endif %}
+    ul.content-section
+      | {% for report in reports %}
+      li.item-list
+        a(href='{{report.reptLinkUrl}}')
+          div.img-wrap
+              img(src='{{report.reptPic}}')
+          div.report-name {{report.reptTitle}}
+      | {% endfor %}

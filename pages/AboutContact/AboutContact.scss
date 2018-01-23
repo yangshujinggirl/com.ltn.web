@@ -1,0 +1,61 @@
+.about-contact {
+  padding:0 30px 30px;
+  .title{
+    margin: 20px 0;
+    border-bottom: 2px solid #e2e2e2;
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid #ea5504;
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      padding: 10px 0;
+      margin-bottom: -2px;
+    }
+  }
+  .contact-content {
+    text-align: center;
+  }
+  .map {
+    width: 600px;
+    height: 276px;
+    background-color: #ccc;
+    margin: 0 auto;
+    img{
+      width: 100%;
+    }
+  }
+  .company-info {
+    padding: 20px 0;
+    .name {
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: bold;
+    }
+  }
+  .contact-title {
+      font-size: 18px;
+      display: inline-block;
+      font-weight: bold;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+      margin: 0 0 58px;
+   }
+   .contact-us {
+     font-size: 0;
+     p {
+       margin:0;
+     }
+     .item {
+       font-size: 12px;
+       display: inline-block;
+       vertical-align: top;
+       width: 33.3%;
+     }
+     .num {
+       font-size: 14px;
+       font-weight: bold;
+     }
+   }
+}

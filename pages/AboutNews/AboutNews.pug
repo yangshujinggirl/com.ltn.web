@@ -1,0 +1,41 @@
+//- 集成关于我们布局
+extends ../../common/pages/about/about_layout.pug
+block head
+  title 媒体报道
+//- 设置模板参数
+block menu
+  - var act =7
+block about-content
+  div.about-partner-contain
+    div.title
+      span 媒体报道
+    | {% for news in newsList %}
+    div.item
+      div.introduce
+        p
+          a(href='/about/news/{{news.id}}') {{ news.title }} 
+            span.date {{ news.publishTime }}
+        p {{ news.nIntroduction }}
+      img(src='{{ news.nMediaPicture }}')
+    | {% else %}
+    div.nodata
+      | 没有数据
+    | {% endfor %}
+    | {% if (newsList.length) %}
+    | {% if (totalPage>1) %}
+    div.page-navigation
+      | {% if (currentPage>1) %}
+      a(href="/about/news?pageNum={{currentPage-1}}") 上一页
+      | {% endif %}
+      | {% for pageNum in pageNumArray %}
+      | {% if (pageNum == currentPage) %}
+      a(data-selected="true") {{pageNum}}
+      | {% else %}
+      a(href="/about/news?pageNum={{pageNum}}") {{pageNum}}
+      | {% endif %}
+      | {% endfor %}
+      | {% if (currentPage<totalPage) %}
+      a(href="/about/news?pageNum={{currentPage+1}}") 下一页
+      | {% endif %}
+    | {% endif %}
+    | {% endif %}

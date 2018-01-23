@@ -1,0 +1,125 @@
+.about-team-content{
+  padding: 30px;
+  padding-top: 0;
+  .title{
+    margin: 20px 0;
+    border-bottom: 2px solid #e2e2e2;
+    margin-bottom: 38px;
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid #ea5504;
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      padding: 10px 0;
+      margin-bottom: -2px;
+    }
+  }
+
+  .year-wrap{
+    margin-top: 50px;
+    box-sizing: border-box;
+    padding-left: 152px;
+    position: relative;
+    padding-top: 35px;
+    p,div,h2,h3,h4{
+      margin: 0;
+      padding: 0;
+    }
+    h2{
+      font-size: 24px;
+      color: #333;
+      margin: 0;
+      width: 60px;
+      position: absolute;
+      top: 0;
+      left: 82px;
+      text-align: right;
+      font-weight: normal;
+    }
+    .momth-list{
+      .momth-wrap{
+        position: relative;
+        border-left: 1px solid #dddddd;
+        padding-bottom:45px;
+        padding-left: 120px;
+        .month{
+          position: absolute;
+          width: 80px;
+          left: -90px;
+          text-align: right;
+          color: #b5b5b5;
+          font-size: 16px;
+          top:-4px;
+        }
+        i{
+          position: absolute;
+          left: -6px;
+          width: 12px;
+          height: 12px;
+          background-color: #ff6600;
+          border-radius: 50%;
+          top: 0;
+        }
+        p{
+          margin-bottom: 10px;
+          color: #757575;
+          font-size: 16px;
+          .date{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // .years-wrap{
+  //   padding-left: 152px;
+  //   box-sizing: border-box;
+  //   .year-item{
+  //     .items{
+  //       border-left: 1px solid #dddddd;
+  //       position: relative;
+  //       margin-top:85px;
+  //       margin-bottom: 85px;
+  //       h2{
+  //         font-size: 24px;
+  //         color: #333;
+  //         position: absolute;
+  //         top: -35px;
+  //         left: -70px;
+  //         margin: 0;
+  //         width: 60px;
+  //       }
+  //       .item{
+  //         padding-left:116px;
+  //         .month{
+  //           position: absolute;
+  //           width: 80px;
+  //           left: -90px;
+  //           text-align: right;
+  //           color: #b5b5b5;
+  //           font-size: 16px;
+  //         }
+  //         i{
+  //           position: absolute;
+  //           left: -6px;
+  //           width: 12px;
+  //           height: 12px;
+  //           background-color: #ff6600;
+  //           border-radius: 50%;
+  //           top: 0;
+  //         }
+  //         p{
+  //           color: #757575;
+  //           font-size: 16px;
+  //           .date{
+  //             margin-right: 20px;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}

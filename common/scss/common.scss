@@ -1,0 +1,40 @@
+.clearfix:after {
+  content: '123';
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+ul,li{
+  list-style: none;
+  list-style-type:none;
+  padding: 0;
+}
+a{
+  color:#333;
+  text-decoration:none;
+}
+body{
+  background-color: #f5f6f7;
+}
+.din-font{
+  font-family: DIN-medium;
+}
+// 隐藏cnzz点展示图
+#cnzz_stat_icon_1258037212{
+  display: none;
+}
+button {
+  outline-style: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+input,textarea{
+  border:1px solid #ddd;
+  padding-left: 20px;
+  box-sizing: border-box;
+  &:focus {
+    outline:1px solid #f60;
+  }
+}

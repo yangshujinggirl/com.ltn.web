@@ -1,0 +1,76 @@
+.top-header{
+  background-color: #f5f5f5;
+  .content{
+    max-width: 1190px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #666;
+    padding: 8px 0;
+    .left{
+      position: relative;
+      padding-left: 180px;
+      float: left;
+      .tel{
+        left: 0;
+        width: 180px;
+        height: 100%;
+        position: absolute;
+      }
+      .ltn-iconfont{
+        color: #666;
+        display: inline-block;
+        font-size: 19px;
+        margin-right: 10px;
+        &:hover{
+          cursor: pointer;
+          color: #f60;
+        }
+      }
+      .icon-weixin{
+        position: relative;
+        .weixin-code {
+          position: absolute;
+          left: 50%;
+          bottom: -100px;
+          margin-left: -44px;
+          z-index: 100;
+          box-shadow: 2px 2px 20px rgba(0,0,0,.3);
+          display: none;
+          .icon-arrow {
+            position: absolute;
+            top:0;
+            left: 50%;
+            margin-left: -6.5px;
+            margin-top: -5px;
+          }
+        }
+      }
+      .code{
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        top:24px;
+        left: 164px;
+        margin: 0;
+        display:node;
+        z-index: 22;
+      }
+
+    }
+    .right{
+      float: right;
+      a{
+        color: #666;
+        text-decoration: none;
+        padding-left: 24px;
+        &:hover{
+          color: #f60;
+          cursor: pointer
+        }
+      }
+      .login,.register,.userInfo,.loginOut,.parent{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+extends ../../common/pages/layout.pug
+block head
+  title 新手指南 热门活动
+block body
+  div.newer-guide-wrap
+    div.banner
+      img(src=require('./imgs/guide_01.png') alt='领投鸟新手指南')
+    div.guide-process
+      p.steps-title 用户注册
+      div.steps
+        div.swiper-pagination
+        div.swiper-container 
+          div.swiper-wrapper 
+            div.swiper-slide
+              div.skip
+                p.line-one 第一步
+                p 点击首页注册按钮
+              div.img-contain
+                img(src=require('./imgs/guide_02.png') alt='领投鸟注册步䠫一')
+            div.swiper-slide
+              div.skip
+                p.line-one 第二步
+                p 验证手机，填写相关信息进行注册
+              div.img-contain
+                img(src=require('./imgs/guide_06.png') alt='领投鸟注册步䠫一')
+          div.swiper-button-prev
+          div.swiper-button-next
+    div.guide-process.odd-guide-process
+      p.steps-title 实名认证
+      div.steps
+        div.swiper-pagination
+        div.swiper-container 
+          div.swiper-wrapper 
+            div.swiper-slide
+              div.img-contain
+                img(src=require('./imgs/guide_02.png') alt='领投鸟注册步䠫一')
+              div.skip
+                p.line-one 第一步
+                p 填写“姓名” “身份证号码”
+            div.swiper-slide
+              div.img-contain
+                img(src=require('./imgs/guide_06.png') alt='领投鸟注册步䠫一')
+              div.skip
+                p.line-one 第二步
+                p 实名成功跳至“联动优势”进行开 户，填写相关表单。
+                p 注:只有实名认证开户成功后才可 进行相关资金操作。
+          div.swiper-button-prev
+          div.swiper-button-next
+    div.guide-process
+      p.steps-title 绑定银行卡
+      div.steps
+        div.swiper-pagination
+        div.swiper-container 
+          div.swiper-wrapper 
+            div.swiper-slide
+              div.skip
+                p.line-one 第一步
+                p 进入账户中心，点“我的银行卡”，
+                p 输入相关信息，绑定银行卡。
+              div.img-contain
+                img(src=require('./imgs/guide_09.png') alt='领投鸟注册步䠫一')
+            div.swiper-slide
+              div.skip
+                p.line-one 第二步
+                p 进入联动优势，输入相关信息，
+                p 点击“确定”按钮。
+                p 注：银行预留手机号必须与注册 手机号一致。
+              div.img-contain
+                img(src=require('./imgs/guide_10.png') alt='领投鸟注册步䠫一')
+          div.swiper-button-prev
+          div.swiper-button-next
+    div.guide-process.odd-guide-process
+      p.steps-title 快捷充值
+      div.steps
+        div.swiper-pagination
+        div.swiper-container 
+          div.swiper-wrapper 
+            div.swiper-slide
+              div.img-contain
+                img(src=require('./imgs/guide_11.png') alt='领投鸟注册步䠫一')
+              div.skip
+                p.line-one 第一步
+                p 点击我的账户左侧“充值提现” 栏目，
+                p 在“快捷充值”选项卡下， 输入充值金
+                p 额，点击“确定充值” 按钮。
+            div.swiper-slide
+              div.img-contain
+                img(src=require('./imgs/guide_12.png') alt='领投鸟注册步䠫一')
+              div.skip
+                p.line-one 第二步
+                p 输入该手机号码接收到的验证码。
+          div.swiper-button-prev
+          div.swiper-button-next
+    div.guide-process
+      p.steps-title 大额充值
+      div.steps
+        div.swiper-pagination
+        div.swiper-container 
+          div.swiper-wrapper 
+            div.swiper-slide
+              div.skip
+                p.line-one 第一步
+                p 点击我的账户左侧“充值提现” 栏目，
+                p 在“网银充值”选项卡下， 输入充值金
+                p 额，点击“确定充值” 按钮。
+              div.img-contain
+                img(src=require('./imgs/guide_13.png') alt='领投鸟注册步䠫一')
+            div.swiper-slide
+              div.skip
+                p.line-one 第二步
+                p 进入网银充值页面，填写银行卡号
+                p 或支付号，点击“下一步”按钮，
+                p 填写支付相关信息。
+                p (注：以交通银行示例)
+              div.img-contain
+                img(src=require('./imgs/guide_14.png') alt='领投鸟注册步䠫一')
+          div.swiper-button-prev
+          div.swiper-button-next

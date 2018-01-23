@@ -1,0 +1,25 @@
+extends ../../common/pages/layout.pug
+block head
+  title 新手指南 热门活动
+block body
+  div.activity_banner_wrap
+    div.activity_banner-contain
+      div.activity_title
+        span 活动列表
+      | {% for banner in activityList %}
+      a.list-item(href='{{banner.activityUrl}}' target='_blank')
+        | {% if (banner.activityStatus==1) %}
+        div.activity-status.ongoing 进行中
+        | {% elif (banner.activityStatus==2) %}
+        div.activity-status.long-term 长期有效
+        | {% else %}
+        div.activity-status.expire 已结束
+        | {% endif %}
+        img(src='{{banner.activityBanner}}')
+        p.info
+          span.activity-name {{banner.avtivityTitle}}
+          span.expiryDate |&nbsp;&nbsp;&nbsp;&nbsp;{{banner.endTime}}
+          span.banner-cont {{banner.activityContent}}
+      | {% else %}
+      div.no-data 暂时没有数据
+      | {% endfor %}

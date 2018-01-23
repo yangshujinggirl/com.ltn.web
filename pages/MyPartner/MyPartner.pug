@@ -1,0 +1,36 @@
+extends ../../common/pages/layout.pug
+block head
+  title 我是合伙人
+block body
+  .my-partner-wrap
+    .banner
+      img(src=require('./imgs/mypartner_banner.png') alt='banner')
+    .partner-content-wrap
+      .what-partner-contain
+        p.coin-title
+          img(src=require('./imgs/mypartner_icon1.png') alt="安全")
+          span 什么是合伙人计划？
+        .con-one
+          img(src=require('./imgs/mypartner_boy.png') alt="question")
+          .text-contain
+            span 央妈降息又降准，股市脾气说不准，房价涨、物价涨，怎么投资才能抵抗通货膨胀、货币贬值？
+            span 领投鸟平台特地为所有用户推出合伙人赚钱计划，只要推荐亲朋好友投资，您就可轻松赚取平台奖励，好友赚钱你返利，按日计提，躺着赚钱就是这样简单。
+        .con-two
+          span.name 名词解释
+          ul
+            li
+              span.left 合伙人
+              span.right 所有在领投鸟平台完成绑卡步骤的用户都可成为合伙。
+            li
+              span.left 一级好友
+              span.right 合伙人A邀请B加入领投鸟，则B属于A的一级好友。
+            li
+              span.left 二级好友
+              span.right 合伙人A的一级好友B邀请C加入领投鸟，则C属于A的二级好友。
+            li
+              span.left 普通合伙人
+              span.right 满足合伙人基本条件，有1位一级好友完成绑卡即可成为普通合伙人。
+            li
+              span.left 金牌合伙人
+              span.right 满足合伙人基本条件，有3位一级好友完成绑卡即可成为金牌合伙人。
+          img.boy(src=require('./imgs/plan_boy2.png') alt="合伙人")

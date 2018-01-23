@@ -1,0 +1,70 @@
+.about-partner-contain{
+  padding: 30px;
+  .title{
+    margin: 20px 0;
+    border-bottom: 2px solid #e2e2e2;
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid #ea5504;
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      padding: 10px 0;
+      margin-bottom: -2px;
+    }
+  }
+  .item{
+      overflow: hidden;
+      padding: 62px 0 10px;
+      border-bottom: 2px solid #ccc;
+    img{
+      width: 300px;
+    }
+    .introduce{
+      float: left;
+      width:626px;
+      p:first-child{
+        margin: 0;
+        font-size: 18px;
+        a{
+          color: #ea5504
+        }
+        .date{
+          font-size:12px;
+          margin-left: 5px;
+        }
+      }
+      p:last-child{
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+    // 分页
+  .page-navigation{
+    text-align: center;
+    margin-top: 20px;
+    a{
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 0 10px;
+      height: 30px;
+      line-height: 30px;
+      display: inline-block;
+      margin-left: 4px;
+      &:hover{
+        cursor: pointer;
+      }
+      &[data-selected='true']{
+        background-color:#ff6f20;
+        border: 1px solid #ff6f20;
+        color: #fff;
+      }
+    }
+    li{
+      display: inline-block;
+    }
+  }
+
+}

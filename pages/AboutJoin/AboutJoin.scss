@@ -1,0 +1,54 @@
+// 帮助中心内容
+.about-mian-wrap{
+  .about-content{
+    padding: 30px;
+    padding-top: 0;
+    .title{
+      margin: 20px 0;
+      border-bottom: 2px solid #e2e2e2;
+      span{
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 2px solid #ea5504;
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: -2px;
+      }
+    }
+    .text{
+      p{
+        margin: 0;
+        line-height: 1.5em;
+      }
+      .email{color: #0c81da;}
+      .header{
+        margin: 15px 0;
+        font-size: 18px;
+        color: #434343;
+        font-weight: bold;
+        .more{
+          color: #f60;
+          float: right;
+        }
+      }
+    }
+    .list-item{
+      background: #F7F7F7;
+      border: 1px solid #E2E2E2;
+      padding: 5px 20px;
+      margin: 40px 0;
+      .find-job-header{
+        color: #F68818;
+        cursor: pointer;
+        font-size: 1.17em;
+        a{
+          color: #F68818;
+          font-size: 12px;
+          float: right;
+        }
+      }
+    }
+  }
+}

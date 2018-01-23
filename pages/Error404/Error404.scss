@@ -1,0 +1,20 @@
+.error-wrap{
+  text-align: center;
+  color: #000;
+  background: #fff;
+  .error-contain{
+    line-height: 0;
+    border-top: 1px solid #eaeaea;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .go-back{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    a{color: #f60;}
+  }
+}
+body{
+  background: #fff;
+}

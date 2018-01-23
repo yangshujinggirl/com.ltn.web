@@ -1,0 +1,45 @@
+//- 集成关于我们布局
+extends ../../common/pages/about/about_layout.pug
+block head
+  title 关于我们 品牌优势
+//- 设置模板参数
+block menu
+  - var act =5
+block about-content
+  div.about-advantage-contain
+    div.title
+      span 品牌优势
+    div.text-contain
+      h2.vice-title 平台优势
+      p 资产优质 多维度甄选优质资产
+      p 多重风控 贷前贷后全程安全保障
+      p 技术保障 避免系统性风险
+      p 公开透明 财务公开 合法合规
+      h2.vice-title 业务模式
+      p 领投鸟资产端对接女性多场景金融消费分期业务，围绕医美、女性商品等消费场景下，提供消费金融服务。消费者先提前享用产品与服务，按月分期还本付息给投资人。投资人通过资金的出借获得利息收益
+      div.service-pic
+        img(src=require('./imgs/1-0b107.png') alt='领投鸟业务模式图')
+    div.trade-flow-conatin
+      div.flow-list
+        div.icon-contain.cleanfix
+          img.icon(src=require('./imgs/advantage_02.png') alt='注册认证')
+          img.arrow(src=require('./imgs/advantage_06.png') alt='箭头')
+        p 注册认证
+      div.flow-list
+        div.icon-contain
+          img.icon(src=require('./imgs/advantage_03.png') alt='充值到我的账户')
+          img.arrow(src=require('./imgs/advantage_06.png') alt='箭头')
+        p 充值到我的账户
+      div.flow-list
+        div.icon-contain
+          img.icon(src=require('./imgs/advantage_04.png') alt='选择项目进行购买')
+          img.arrow(src=require('./imgs/advantage_06.png') alt='箭头')
+        p 选择项目进行购买
+      div.flow-list
+        div.icon-contain
+          img.icon(src=require('./imgs/advantage_05.png') alt='项目到期返还本息')
+        p 项目到期返还本息
+      p.flow-text 用户购买流程
+    div.account-pic
+      img(src=require('./imgs/advantage_07.png') alt='账户托管中心')
+      p 账户托管中心

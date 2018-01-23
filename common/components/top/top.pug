@@ -1,0 +1,20 @@
+//- 最顶上的导航头
+script(type="text/javascript") if(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|WindowsPhone)/i)){window.location.href='https://www.lingtouniao.com/native/home/home.html';}
+header.top-header
+  div.content.clearfix
+    div.left
+      span.tel 客服电话：400-999-9980
+      span.ltn-iconfont.icon-weixin
+        span.weixin-code
+          img(src=require('./imgs/icon_code.png'))
+          img(src=require('./imgs/icon_arrow_code.png')).icon-arrow
+      a.ltn-iconfont.icon-weibo(href="http://weibo.com/u/5935757405" target="_blank")
+    div.right
+      a.login 登录
+      a.register 注册 
+      a.userInfo
+      a.loginOut 安全退出
+      a(href="/other/actlist" target="_blank") 最新活动
+      a(href="/other/downloadapp" target="_blank") 下载APP
+      a.parent(href="/html/mypartner/" target="_blank") 我是合伙人
+      a(href='/help/aboutltn' target="_blank") 帮助中心

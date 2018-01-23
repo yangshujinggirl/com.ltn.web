@@ -1,0 +1,279 @@
+extends ../../common/pages/layout.pug
+block head
+  title 领投鸟透明稳健的互联网理财平台-短期理财_p2p理财【官网】
+  meta(name="keywords" content="p2p理财,p2p理财产品排行榜,p2p理财排行,短期理财,短期理财产品,互联网理财平台,理财产品排行榜,理财公司排行榜,理财排行,十大P2P排行榜,投资理财排行榜,网上理财产品,小额投资产品")
+  meta(name="description" content="领投鸟互联网理财平台,短期理财产品,p2p网贷排名,理财公司排行榜,十大P2P排行榜,网络投资理财,互联网理财,网上怎么理财等信息.")
+block body
+  div.home-page-wrap
+    //- 首页新的banner
+    .banner-wrap
+      ul.img-items
+        | {% for banner in bannerList %}
+        li(style="background-image:url({{banner.bannerPicture}})")
+          a(href="{{banner.bannerUrl}}" alt="{{banner.bannerTitle}}" rel="nofollow" target="_blank")
+        | {% endfor %}
+      .page
+        | {% for banner in bannerList %}
+        span(index="{{loop.index-1}}")
+        | {% endfor %}
+      .register-info-wrap
+        .register-entrance-contain.islogin
+          //- 登陆显示
+          div
+            p.title 总资产(元):
+            p.totalNum#property.din-font 0.00
+            p.property
+              text 账户余额(元)：
+              span#remainder.din-font 0.00
+            p.text-explain 平台不触碰资金，华瑞银行资金存管
+            a.register-btn(href='/account/#/account/viewall') 进入账户中心
+        .register-entrance-contain.nologin
+          //- 未登陆显示
+          div
+            p.title 历史年化收益
+            p.percent
+              span.din-font 10.2
+              | %
+            p.text-explain 一亿注册资本金&nbsp;&nbsp;上海华瑞银行资金存管
+            a.register-btn(href='/account/#/user/register') 注册即领红包
+    //- 平台数据
+    div.platform-data.clearfix
+      div.item
+        span.label 平台注册用户:
+        span.num {{platformData.userNum}}
+        span.unit 人
+      div.item
+        span.label 累计投资金额:
+        span.num {{(platformData.totalAmount/100000000) | int}}
+        span.unit 亿
+        span.num {{((platformData.totalAmount- ((platformData.totalAmount/100000000) | int)*100000000)/10000) | int}}
+        span.unit 万元
+      div.item
+        span.label 为用户赚取收益:
+        span.num {{(platformData.profit/10000) | int}}
+        span.unit 万
+        span.num {{(platformData.profit-((platformData.profit/10000) | int)*10000) | int}}
+        span.unit 元
+      div.item.a.platform-report-conetnt
+        a(href="/about/reportm")
+          img.icon(src=require('./imgs/icon_home5.png') data-src=require('./imgs/icon_home5hover.png'))
+          a(href="/about/report").label 领投鸟平台运营报告>>
+    //- 平台特征
+    div.platform-feature-wrap
+      div.platform-feature.clearfix
+        div.item
+          a(href="/other/safeguards#1" target="_blank")
+          img(src=require('./imgs/icon_home8.png'))
+          p 资产优质
+          span 贷前贷后全程安全保障
+        div.item
+          a(href="/other/safeguards#0" target="_blank")
+          img(src=require('./imgs/icon_home6.png'))
+          p 多重风控
+          span 多维度甄选优质资产
+        div.item
+          a(href="/other/safeguards#5" target="_blank")
+          img(src=require('./imgs/icon_home10.png'))
+          p 技术保障
+          span 避免系统性风险
+        div.item
+          a(href="/other/safeguards#3" target="_blank")
+          img(src=require('./imgs/icon_home7.png'))
+          p 公开透明
+          span 财务公开，合法合规
+    //- 新手标的
+    div.finance-new
+      p.title
+        span.tag 新手
+        span 高性价比
+        a.hidden-register(href="/account/#/user/register") 注册>>
+      div.itemlist.clearfix
+        div.item.maindes
+          .position-wrap
+            h4 新手专享
+            p 618元返现券
+            img(src=require('./imgs/icon_home9.png'))
+        a(href='/finance/detail/1')
+          div.item.finance
+            p.title
+              span 体验标
+              span 体验即送鸟币
+            p.profit
+              span.num {{newProject.tyb.annualIncomeText | float}}
+              span.unit %
+            p.des
+              span 历史年化收益
+            p.money.clearfix
+              span 投资期限:1天
+              span 起投金额:0.00元
+            button 立即投资
+        a(href='/finance/detail/{{newProject.xsbList[0].productId}}')
+          div.item.finance
+            p.title
+              span {{newProject.xsbList[0].productName}}
+            p.profit
+              span.num {{newProject.xsbList[0].annualIncomeText | float}}
+              span.unit %
+            p.des
+              span 历史年化收益
+            p.money.clearfix
+              span 投资期限:{{newProject.xsbList[0].convertDay}}天
+              span 起投金额:{{newProject.xsbList[0].staInvestAmount | round(2,'floor')}}元
+            button 立即投资
+    //-计划列表
+    div.finance-plan-wrap
+      div.finance-list
+        p.title
+          span.tag 理财计划
+          span 快、安、稳、定系列，理财省心又省力！
+          a(href='/finance/list/2/0/0/0') 更多>>
+        div.list-contain.clearfix
+          | {% set obj = {"1007001":"快","1007002":"安","1007003":"稳","1007004":"定"} %}
+          | {% for finance in financePlanList %}
+          a(href="/finance/detail/{{finance.productId}}")
+            div(class="item item{{loop.index}}")
+              p.series-title
+                span.icon {{obj[finance.secondCategoryId]}}
+                span.series {{finance.productName}}
+              p.nterest-rate.din-font {{finance.annualIncomeText}}
+              p.rate-des 历史年化收益
+              div.discription-content.clearfix
+                div.left
+                  p.num {{finance.convertDay}}
+                    span 天
+                  p.unit 项目期限
+                div.right
+                  p.num {{finance.staInvestAmount}}
+                    span 元
+                  p.unit 起投金额
+          | {% endfor %}
+    //- 其他标的列表
+    div.finance-list-wrap
+      div.finance-list
+        p.title
+          span.tag 精选散标
+          span 全流程把控
+          a(href="/finance/list/3/0/0/0") 更多>>
+        div.itemlist.clearfix
+          div.maindes
+            img(src=require('./imgs/img4.jpg'))
+          div.finance-wrap
+            | {% for finance in homeProjectList %}
+            div.finance
+              p.name-tag-wrap
+                span.name {{finance.productName}}
+                | {% if(finance.productTags) %}
+                span.tag {{finance.productTags}}
+                | {% endif %}
+              div.detail.clearfix
+                div.detail-item
+                  span.profit.din-font {{finance.annualIncomeText}}
+                  span.des 历史年化收益
+                div.detail-item
+                  span.num {{finance.convertDay}}
+                    span.unit 天
+                  span.des 投资期限
+                div.detail-item
+                  span
+                    span.num {{(finance.productTotalAmount/10000) | int}}
+                    span.unit 万
+                  span.des 项目总额
+                div.detail-item
+                  span.progress
+                    span.complete(style="width:{{((finance.productTotalAmount-finance.productRemainAmount)/finance.productTotalAmount*100) | round(2)}}%")
+                  span.des 剩余金额
+                    i.black  {{finance.productRemainAmount}}
+                    i  元
+                div.detail-item
+                  a(href="/finance/detail/{{finance.productId}}")
+                    | {% if(finance.productStatus === '1') %}
+                    button 立即投资
+                    | {% elif(finance.productStatus === '3') %}
+                    button.disable 已还款
+                    | {% elif(finance.productStatus === '2') %}
+                    button.disable  募集结束
+                    | {% else %}
+                    button.disable 还款结束
+                    | {% endif %}
+            | {% endfor %}
+    //- 银行存管
+    .bank-description
+      a(href="/other/depository" target="_blank")
+        img(src=require('./imgs/bank.jpg'))
+    //-  资讯入口
+    div.information-wrap.clearfix
+      //- 媒体报道
+      div.news
+        div.main-title.clearfix
+          span 媒体报道
+          a(href="/about/news" target="_blank") 更多
+        div.main-news
+          a(href="/about/news/{{news[0].id}}" target="_blank")
+            img(src="{{news[0].nMediaPicture}}")
+            h3 {{news[0].title | truncate(34,true,'......')}}
+            p {{news[0].nIntroduction | truncate(100,true,'......')}}
+        div.marquee
+          | {% for newitem in news %}
+          a.clearfix(href="/about/news/{{newitem.id}}" target="_blank")
+            span.text {{newitem.title}}
+            span.date {{newitem.publishTime}}
+          | {% endfor %}
+      //- 平台公告
+      div.notices
+        div.main-title.clearfix
+          span 平台公告
+          a(href="/about/notice" target="_blank") 更多
+        div.notices-marquee
+          | {% for notice in notices %}
+          a.clearfix(href="/about/notice/{{notice.id}}" target="_blank")
+            span.text {{notice.title}}
+            span.date {{notice.publishTime}}
+            i.cycle-inner
+            i.cycle-outer
+          | {% endfor %}
+    //- 合作伙伴
+    div.partner-wrap
+      div.partner-list
+        div.main-title.clearfix
+          span 合作机构
+          a(href='/about/partner' target="_blank") 更多>>
+        div.partner-imgs-list
+          a(href="https://www.shrbank.com/" target="_blank")
+            img.bankone(src=require('./imgs/partner/1/huaruiyinhang.png'))
+            img.show.bankone(src=require('./imgs/partner/2/huaruiyinhang.png'))
+          a(href="https://www.juxinli.com/" target="_blank")
+            img(src=require('./imgs/partner/1/julixin.png'))
+            img.show(src=require('./imgs/partner/2/julixin.png'))
+          a(href="https://www.tongdun.cn/ " target="_blank")
+            img(src=require('./imgs/partner/1/tongdunkeji.png'))
+            img.show(src=require('./imgs/partner/2/tongdunkeji.png'))
+          a(href="http://www.udcredit.com/" target="_blank")
+            img.youdun(src=require('./imgs/partner/1/youdunkeji.png'))
+            img.show.youdun(src=require('./imgs/partner/2/youdunkeji.png'))
+          a(href="https://www.limuzhengxin.com/" target="_blank")
+            img.limu(src=require('./imgs/partner/1/limuzhengxin.png'))
+            img.show.limu(src=require('./imgs/partner/2/limuzhengxin.png'))
+          a(href="https://www.ebaoquan.org/" target="_blank")
+            img(src=require('./imgs/partner/1/yibaoquan.png'))
+            img.show(src=require('./imgs/partner/2/yibaoquan.png'))
+          a(href="https://www.zhichengcredit.com/zc/" target="_blank")
+            img(src=require('./imgs/partner/1/zhichengafu.png'))
+            img.show(src=require('./imgs/partner/2/zhichengafu.png'))
+          a(href="https://www.baiqishi.com/" target="_blank")
+            img(src=require('./imgs/partner/1/baiqishi.png'))
+            img.show(src=require('./imgs/partner/2/baiqishi.png'))
+          a(href="http://www.wdzj.com/dangan/ltnlc/" target="_blank")
+            img.wangdai(src=require('./imgs/partner/1/wangdaizhijia.png'))
+            img.show.wangdai(src=require('./imgs/partner/2/wangdaizhijia.png'))
+          a(href="http://lingtouniao.p2peye.com/" target="_blank")
+            img.tianyan(src=require('./imgs/partner/1/wangdaitianyan.png'))
+            img.show.tianyan(src=require('./imgs/partner/2/wangdaitianyan.png'))
+  //- 侧边栏的悬浮按钮
+  .slidebar-wrap
+    .wrap
+      span.ltn-iconfont.icon-kefu
+      span.text 在线咨询
+    span.ltn-iconfont.icon-qcode
+      img(src=require('./imgs/code-weixin.png'))
+      i.text-shaoma 扫码关注
+    .ltn-iconfont.icon-top-arrow

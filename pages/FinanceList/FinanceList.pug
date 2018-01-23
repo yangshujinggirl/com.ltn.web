@@ -1,0 +1,102 @@
+extends ../../common/pages/layout.pug
+block head
+  title 理财列表
+block body
+  .banner-wrap
+  .finance-list-page
+    .tab-level-one
+      | {% for item in TabLevelOneArray %}
+      | {% if(item.productType === 0) %}
+      a(href="/finance/list/0/1/0/0" class="{{ item.selected }}") {{item.text}}
+      | {% else %}
+      a(href="/finance/list/{{item.productType}}/0/0/0" class="{{ item.selected }}") {{item.text}}
+      | {% endif %}
+      | {% endfor %}
+    | {% if(queryParams.productType != 0) %}
+    .tab-level-two.hover
+      span 项目期限
+      | {% for item in TabLevelTwoArray %}
+      a(href="/finance/list/{{queryParams.productType}}/{{queryParams.productStatus}}/{{item.href}}" class="{{ item.selected }}") {{item.text}}
+      | {% endfor %}
+    .tab-level-three.hover
+      span 项目状态
+      | {% for item in TabLevelThreeArray %}
+      a(href="/finance/list/{{queryParams.productType}}/{{item.productStatus}}/{{queryParams.productDeadlineStart}}/{{queryParams.productDeadlineEnd}}" class="{{ item.selected }}") {{item.text}}
+      | {% endfor %}
+    | {% endif %}
+    | {% if(searchList.length > 0) %}
+    | {% for item in searchList %}
+    a(href="/finance/detail/{{item.productId}}")
+      div(class="{% if(item.productStatus !== '1') %}list-item over clearfix{% else %}list-item clearfix{% endif %}")
+        p.title-wrap
+          span.name(title="{{item.productName}}") {{item.productName}}
+          | {% if(item.productTag) %}
+          span.icon {{item.productTag}}
+          | {% endif %}
+        .content
+          .rate-cont.float
+            p.rat
+              span.big.din-font {{item.annualIncomeText}}
+            p 历史年化收益
+          .cycle-cont.float
+            p.cycle
+              span.big {{item.convertDay}}
+              span 天
+            p 投资期限
+          .star-money.float
+            p.money
+              span.big {{item.staInvestAmount}}
+              span 元
+            p 起投金额
+          .process-line.float
+            .line-bottom
+              p.line(style='width:{{((item.productTotalAmount-item.productRemainAmount)/item.productTotalAmount*100)| round(2)}}%')
+            p.explain
+              span 剩余金额
+              span.num {{item.productRemainAmount}}
+              span 元
+          | {% if(item.productStatus === '1') %}
+          p.go-invest.float.go-detail 立即投资
+          | {% elif(item.productStatus === '3') %}
+          p.float.go-detail 已还款
+          | {% elif(item.productStatus === '2') %}
+          p.float.go-detail 募集结束
+          | {% else %}
+          p.float.go-detail 还款结束
+          | {% endif %}
+    | {% endfor %}
+    | {% else %}
+    .list-item
+      div.no-data
+        img(src=require('./imgs/wushuju.png'))
+        p 暂时还没有哦～_～
+    | {% endif %}
+    | {% if (searchList.length) %}
+    | {% if (totalPage>1) %}
+    .page-navigation
+      | {% if (currentPage>1) %}
+      a(href="/finance/list/{{queryParams.productType}}/{{queryParams.productStatus}}/{{queryParams.productDeadlineStart}}/{{queryParams.productDeadlineEnd}}?pageNum=0") 首页
+      a(href="/finance/list/{{queryParams.productType}}/{{queryParams.productStatus}}/{{queryParams.productDeadlineStart}}/{{queryParams.productDeadlineEnd}}?pageNum={{currentPage-1}}") 上一页
+      | {% endif %}
+      | {% for pageNum in pageNumArray %}
+      | {% if (pageNum == currentPage) %}
+      a(data-selected="true") {{pageNum}}
+      | {% else %}
+      a(href="/finance/list/{{queryParams.productType}}/{{queryParams.productStatus}}/{{queryParams.productDeadlineStart}}/{{queryParams.productDeadlineEnd}}?pageNum={{pageNum}}") {{pageNum}}
+      | {% endif %}
+      | {% endfor %}
+      | {% if (currentPage<totalPage) %}
+      a(href="/finance/list/{{queryParams.productType}}/{{queryParams.productStatus}}/{{queryParams.productDeadlineStart}}/{{queryParams.productDeadlineEnd}}?pageNum={{currentPage+1}}") 下一页
+      a(href="/finance/list/{{queryParams.productType}}/{{queryParams.productStatus}}/{{queryParams.productDeadlineStart}}/{{queryParams.productDeadlineEnd}}?pageNum={{totalPage}}") 尾页
+      | {% endif %}
+    | {% endif %}
+    | {% endif %}
+  //- 侧边栏的悬浮按钮
+  .slidebar-wrap
+    .wrap
+      span.ltn-iconfont.icon-kefu
+      span.text 在线咨询
+    span.ltn-iconfont.icon-qcode
+      img(src=require('./imgs/code-weixin.png'))
+      i.text-shaoma 扫码关注
+    .ltn-iconfont.icon-top-arrow

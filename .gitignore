@@ -1,0 +1,7 @@
+public/static-client
+public/build
+views/client-templates
+views/build
+node_modules
+log
+public/v*

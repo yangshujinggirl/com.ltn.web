@@ -1,0 +1,9 @@
+extends ../../common/pages/error_layout.pug
+block head
+  title 页面不存在
+block body
+  .error-wrap
+    .error-contain
+      img(src=require('./imgs/error.png'))
+    P.go-back 页面不存在，请
+      a(href='/') 返回首页

@@ -1,0 +1,263 @@
+.about-content-part {
+  border: 1px solid #d7d7d7;
+  width: 1190px;
+  height: 100%;
+  margin: 30px auto;
+  background: #fff;
+  .about-wrap {
+    display: table-row;
+  }
+  .right-content {
+    display: table-cell;
+    vertical-align: top;
+    width: 1010px;
+    .tit-wrap {
+      border-bottom: 2px solid #e2e2e2;
+      .tit {
+        font-size: 18px;
+        font-weight: 700;
+        width: 100px;
+        height: 30px;
+        margin: 0 0 0 10px;
+        border-bottom: 2px solid #ea5504;
+        line-height: 30px;
+        text-align: center;
+        margin: 0;
+      }
+    }
+    .about-content-wrp2 {
+      padding: 35px;
+    }
+  }
+  //平台介绍
+  .about-platform {
+    .wrp2 {
+      padding: 35px;
+    }
+    .info-text {
+      font-size: 14px;
+      line-height: 150%;
+      padding: 40px 0;
+    }
+    .explan-content {
+      padding: 40px 0;
+      .logo,.ex-text {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .ex-text {
+        width: 65%;
+        margin-left: 2%;
+        line-height: 150%;
+      }
+    }
+    .photos {
+      text-align: center;
+      padding: 40px 0;
+    }
+  }
+  //团队介绍
+  .about-team {
+    .part-same {
+      margin-bottom: 40px;
+    }
+    .team-list {
+      .item {
+        padding:15px 0;
+        &:not(:last-child) {
+          border-bottom: 2px solid #e2e2e2;
+        }
+      }
+      .avatar {
+        width: 170px;
+        height: 170px;
+        border: 3px solid #FFF;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        &.leve0 {
+          background: url('../../../pages/aboutTeam/imgs/0.png') center no-repeat;
+        }
+        &.leve1 {
+          background: url('../../../pages/aboutTeam/imgs/1.png') center no-repeat;
+        }
+        &.leve2 {
+          background: url('../../../pages/aboutTeam/imgs/2.png') center no-repeat;
+        }
+        &.leve3 {
+          background: url('../../../pages/aboutTeam/imgs/3.png') center no-repeat;
+        }
+      }
+      .person-info {
+        width: 68%;
+        margin-left:10px;
+        display: inline-block;
+        vertical-align: middle;
+        .header {
+          color: #ea5504;
+          padding-bottom: 20px;
+        }
+        .name {
+          font-size: 18px;
+        }
+        .info-tet {
+
+        }
+      }
+    }
+    .group-list {
+      text-align: center;
+      .item {
+        width: 417px;
+        padding: 20px 0;
+        float: left;
+      }
+      .item:nth-child(2n) {
+        float: right;
+      }
+      .gr-name {
+        font-size: 24px;
+      }
+    }
+  }
+  //平台荣誉
+  .about-honor {
+    .honor-wrap {
+      text-align: center;
+      padding:20px 0;
+    }
+    .item {
+      width: 350px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+
+      &:nth-child(2n) {
+        margin-left: 120px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  //合作伙伴
+  .about-partner {
+    .partner-list {
+      .item {
+        padding: 20px 0;
+        border-bottom: 2px solid #e2e2e2;
+      }
+      .l-p,.r-p {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .l-p {
+        width: 32%;
+        img {
+          width: 100%;
+        }
+      }
+      .r-p {
+        width: 66%;
+        line-height: 150%;
+        .name {
+          font-size: 24px;
+          color: #ff6f20;
+          margin: 0;
+          font-weight: bold;
+        }
+        .tt {
+          position: relative;
+          padding: 19px 15px;
+          &:before,&:after {
+            content:'';
+            width: 19px;
+            height: 15px;
+            position: absolute;
+          }
+          &:before {
+            left: 0;
+            top:0;
+            background: url('../../../pages/aboutPartner/imgs/y0.png') no-repeat;
+          }
+          &:after {
+            right: 0;
+            bottom:0;
+            background: url('../../../pages/aboutPartner/imgs/y1.png') no-repeat;
+          }
+        }
+      }
+    }
+  }
+  //品牌优势
+  .about-advantage {
+    .advantage-content {
+      padding: 0 10px;
+      .lable {
+        color: #ff5a00;
+        font-size: 18px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      .moshi {
+        display: block;
+        margin: 0 auto;
+      }
+      .buy-step {
+        text-align: center;
+        padding: 52px 50px;
+        background: #fff6f2;
+        margin-top: 40px;
+        .step-list {
+          text-align: center;
+        }
+        .item {
+          display: inline-block;
+          vertical-align: top;
+        }
+        .source {
+          display: inline-block;
+          vertical-align: top;
+          padding:0 30px;
+        }
+      }
+      .center {
+        text-align: center;
+        padding: 60px 0;
+      }
+    }
+
+  }
+  //平台公告
+  .about-notice {
+    .item {
+      padding: 20px 0 20px;
+      line-height: 20px;
+      border-bottom: 2px solid #e2e2e2;
+      cursor: pointer;
+      .l-p {
+        float: left;
+        margin: 0;
+      }
+      .r-p {
+        margin: 0;
+        float: right;
+        position: relative;
+        padding-right: 30px;
+        .arrow {
+          position: absolute;
+          right: 0;
+          top:50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          width: 20px;
+          height: 20px;
+          background: url('../../../pages/aboutNotice/imgs/arrow0.png') no-repeat right 0;
+        }
+      }
+      .hidden {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+//- 默认的布局
+html(lang="zh")
+  //- 暴露 head 模块出去
+  head
+    //- 一些默认的头部信息可以写在这里面
+    meta(http-equiv="X-UA-Compatible", content="ie=edge,chrome=1")
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(rel="shortcut icon", href="http://www.lingtouniao.com/html/img/favicon.ico", type="image/x-icon")
+    block head
+  //- 暴露body 模块出去
+  body
+    //- 引入公用头部
+    include ../components/top/top.pug
+    //- 引入导航
+    include ../components/topnav/topnav.pug
+
+    //- 插入的内容
+    block body
+
+    //- 引入页面底部
+    include ../components/foot/foot.pug
+    
+    script(src="{{cdnHost}}/lib/jquery/3.2.1/jquery.production.js")

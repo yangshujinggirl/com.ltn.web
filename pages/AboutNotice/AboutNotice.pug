@@ -1,0 +1,41 @@
+//- 集成关于我们布局
+extends ../../common/pages/about/about_layout.pug
+block head
+  title 平台公告
+//- 设置模板参数
+block menu
+  - var act =6
+block about-content
+  div.about-notice-content
+    p.title
+      span 平台公告 
+    ul.list
+      | {% for notice in noticeList %}
+      li
+        a(href="/about/notice/{{notice.id}}").clearfix
+          span.tag 【{{ notice.nClass }}】
+          span.content-title {{ notice.title }}
+          span.date {{ notice.publishTime }}
+      | {% else %}
+      li.nodata
+        | 没有数据
+      | {% endfor %}
+    | {% if (noticeList.length) %}
+    | {% if (totalPage>1) %}
+    div.page-navigation
+      | {% if (currentPage>1) %}
+      a(href="/about/notice?pageNum={{currentPage-1}}") 上一页
+      | {% endif %}
+      | {% for pageNum in pageNumArray %}
+      | {% if (pageNum == currentPage) %}
+      a(data-selected="true") {{pageNum}}
+      | {% else %}
+      a(href="/about/notice?pageNum={{pageNum}}") {{pageNum}}
+      | {% endif %}
+      | {% endfor %}
+      | {% if (currentPage<totalPage) %}
+      a(href="/about/notice?pageNum={{currentPage+1}}") 下一页
+      | {% endif %}
+    | {% endif %}
+    | {% endif %}
+

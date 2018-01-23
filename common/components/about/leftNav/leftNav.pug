@@ -1,0 +1,57 @@
+div.about-left-nav
+  div.nav-content
+    div.about-type 关于我们
+    div.nav-list
+      -
+        var list =[
+          {
+            name:'平台介绍',
+            path:'/aboutPlatform.html',
+          },
+          {
+            name:' 团队介绍',
+            path:'/aboutTeam.html',
+          },
+          {
+            name:' 平台荣誉',
+            path:'/aboutHonor.html',
+          },
+          {
+            name:'合作伙伴',
+            path:'/aboutPartner.html',
+          },
+          {
+            name:'品牌优势',
+            path:'/aboutAdvantage.html',
+          },
+          {
+            name:' 平台公告',
+            path:'/aboutNotice.html',
+          },
+          {
+            name:' 媒体报道',
+            path:'/aboutNews.html',
+          },
+          {
+            name:' 运营报告',
+            path:'/aboutReportMonth.html',
+          },
+          {
+            name:' 协议范本',
+            path:'/aboutProtocol.html',
+          },
+          {
+            name:' 发展历程',
+            path:'/aboutRoad.html',
+          },
+          {
+            name:' 加入我们',
+            path:'/aboutJoin.html',
+          },
+          {
+            name:' 联系我们',
+            path:'11',
+          }
+        ]
+      each item in list
+        a(href=item.path class="nav-item")= item.name

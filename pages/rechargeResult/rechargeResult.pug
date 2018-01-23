@@ -1,0 +1,29 @@
+html(lang="zh")
+  head
+    //- 一些默认的头部信息可以写在这里面
+    meta(http-equiv="X-UA-Compatible", content="ie=edge,chrome=1")
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(rel="shortcut icon", href="http://www.lingtouniao.com/html/img/favicon.ico", type="image/x-icon")
+    title
+      | {% if(result=="success") %}充值成功{% else %}充值失败{% endif %}
+  body
+    .result-contain
+      | {% if(result=="success") %}
+      .left
+        img(src=require('./imgs/success.png'))
+      .right
+        h2 充值成功！
+        .time-contain
+          | 该页面将在
+          span(id="countdown") 5s
+          | 后关闭
+      | {% else %}
+      .left
+        img(src=require('./imgs/defeat.png'))
+      .right
+        h2 充值失败！
+        .time-contain
+          | 该页面将在
+          span(id="countdown") 5s
+          | 后关闭
+      | {% endif %}
